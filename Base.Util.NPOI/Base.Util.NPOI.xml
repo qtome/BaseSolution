@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Base.Util.NPOI</name>
+    </assembly>
+    <members>
+        <member name="T:Base.Util.NPOI.Excel.ExcelAttrubte">
+            <summary>
+            Excel相关属性
+            </summary>
+        </member>
+        <member name="P:Base.Util.NPOI.Excel.ExcelAttrubte.Name">
+            <summary>
+            导出字段名
+            </summary>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelAttrubte.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelAttrubte.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name"></param>
+            <param name="fillColor"></param>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelAttrubte.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name"></param>
+            <param name="fillColor"></param>
+            <param name="fontColor"></param>
+        </member>
+        <member name="P:Base.Util.NPOI.Excel.ExcelAttrubte.CellFillColor">
+            <summary>
+            单元格填充颜色
+            </summary>
+        </member>
+        <member name="P:Base.Util.NPOI.Excel.ExcelAttrubte.CellFontColor">
+            <summary>
+            单元格字体颜色
+            </summary>
+        </member>
+        <member name="P:Base.Util.NPOI.Excel.ExcelAttrubte.ColumnWidth">
+            <summary>
+            列宽度
+            </summary>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelAttrubte.GetColumnName">
+            <summary>
+            获取Excel列名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelAttrubte.GetColor(System.String)">
+            <summary>
+            获取Excel列名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Base.Util.NPOI.Excel.ExcelHelper">
+            <summary>
+            Excel帮助类
+            </summary>
+            <summary>
+            DataTable数据操作
+            </summary>
+            <summary>
+            工作表-行相关
+            </summary>
+            <summary>
+            工作表相关
+            </summary>
+            <summary>
+            工作簿相关
+            </summary>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.ToDataTable(NPOI.SS.UserModel.ISheet)">
+            <summary>
+            将Sheet中的数据转换成DataTable格式
+            </summary>
+            <param name="sheet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.FillDataTableColumns(NPOI.SS.UserModel.IRow,System.Data.DataTable)">
+            <summary>
+            将行数据转换成DataColumn 填充到DataTable
+            </summary>
+            <param name="row"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.FillDataTableRows(NPOI.SS.UserModel.IRow,NPOI.SS.UserModel.IRow,System.Data.DataTable)">
+            <summary>
+            将行数据转换成DataRow 填充到DataTable
+            </summary>
+            <param name="row"></param>
+            <param name="columnRow">列头行</param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.ToList``1(System.Data.DataTable)">
+            <summary>
+            将DataTable中的数据转换成指定类型的List数据
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.ToVerifyList``1(System.Data.DataTable)">
+            <summary>
+            校验数据同时
+            将DataTable中的数据转换成指定类型的List数据
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.GetRows(NPOI.SS.UserModel.ISheet)">
+            <summary>
+            获取工作表所有行
+            </summary>
+            <param name="sheet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.GetSheets(NPOI.SS.UserModel.IWorkbook)">
+            <summary>
+            获取所有工作表
+            </summary>
+            <param name="workbook"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.FillRowData(NPOI.SS.UserModel.IRow,System.Collections.Generic.List{System.String})">
+            <summary>
+            填充数据
+            </summary>
+            <param name="row"></param>
+            <param name="values">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.FillRowData``1(NPOI.SS.UserModel.IRow,System.Collections.Generic.List{System.Reflection.PropertyInfo},``0)">
+            <summary>
+            填充数据
+            </summary>
+            <param name="row"></param>
+            <param name="propertyInfos">属性列</param>
+            <param name="model">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.FillRowData(NPOI.SS.UserModel.IRow,System.Collections.Generic.List{Base.Util.NPOI.Excel.ExcelAttrubte},System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})">
+            <summary>
+            填充数据
+            </summary>
+            <param name="row"></param>
+            <param name="attrubtes">属性列</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.SetColumnStyle(NPOI.SS.UserModel.IRow,Base.Util.NPOI.Excel.ExcelAttrubte,System.Int32)">
+            <summary>
+            设置列样式
+            </summary>
+            <param name="row"></param>
+            <param name="attrubte">属性列</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.SetCellStyle(NPOI.SS.UserModel.ICell,Base.Util.NPOI.Excel.ExcelAttrubte,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})">
+            <summary>
+            设置单元格样式
+            </summary>
+            <param name="cell"></param>
+            <param name="attrubte"></param>
+            <param name="cellFillColor"></param>
+            <param name="cellFontColor"></param>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.GetColorIndex(System.Drawing.Color)">
+            <summary>
+            获取单元格配色Index
+            </summary>
+            <param name="SystemColour"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.FillData``1(NPOI.SS.UserModel.ISheet,System.Collections.Generic.List{``0})">
+            <summary>
+            将数据填充到工作表中
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="list">行数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.CreateIWorkbook">
+            <summary>
+            创建 Excel工作表接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.CreateIWorkbook(System.String)">
+            <summary>
+            创建 Excel工作表接口
+            </summary>
+            <param name="fileName">文件完整名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.GetIWorkbook(System.String,System.IO.Stream)">
+            <summary>
+            返回Excel工作表接口
+            </summary>
+            <param name="fileName">文件完整名称</param>
+            <param name="stream">数据流</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.NPOI.Excel.ExcelHelper.FillData``1(NPOI.SS.UserModel.IWorkbook,System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            将数据填充到工作簿工作表中
+            </summary>
+            <param name="workbook">工作簿</param>
+            <param name="list">数据</param>
+            <param name="sheetName">工作表名</param>
+            <returns></returns>
+        </member>
+        <member name="T:Base.Util.NPOI.Internal.InternalHelper">
+            <summary>
+            内部帮助类#
+            </summary>
+        </member>
+        <member name="M:Base.Util.NPOI.Internal.InternalHelper.VerifyNullableType(System.Type)">
+            <summary>
+            验证可空类型，获取基础类型
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,623 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Base.Util.Redis</name>
+    </assembly>
+    <members>
+        <member name="P:Base.Util.Redis.RedisConfig.Instance">
+            <summary>
+            单例获取
+            </summary>
+        </member>
+        <member name="M:Base.Util.Redis.RedisConfig.GetConnectionMultiplexer(System.String)">
+            <summary>
+            缓存获取
+            </summary>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisConfig.GetManager(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisConfig.MuxerConfigurationChanged(System.Object,StackExchange.Redis.EndPointEventArgs)">
+            <summary>
+            配置更改时
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisConfig.MuxerErrorMessage(System.Object,StackExchange.Redis.RedisErrorEventArgs)">
+            <summary>
+            发生错误时
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisConfig.MuxerConnectionRestored(System.Object,StackExchange.Redis.ConnectionFailedEventArgs)">
+            <summary>
+            重新建立连接之前的错误
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisConfig.MuxerConnectionFailed(System.Object,StackExchange.Redis.ConnectionFailedEventArgs)">
+            <summary>
+            连接失败 ， 如果重新连接成功你将不会收到这个通知
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisConfig.MuxerHashSlotMoved(System.Object,StackExchange.Redis.HashSlotMovedEventArgs)">
+            <summary>
+            更改集群
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisConfig.MuxerInternalError(System.Object,StackExchange.Redis.InternalErrorEventArgs)">
+            <summary>
+            redis类库错误
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Base.Util.Redis.RedisManager">
+            <summary>
+            缓存管理
+            1.要可以查看所有的缓存
+            2.要可以管理缓存中的数据，如清空，删除等
+            3.可以预先加载
+            </summary>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringSet(System.String,System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            保存单个key value
+            </summary>
+            <param name="key">Redis Key</param>
+            <param name="value">保存的值</param>
+            <param name="expiry">过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringSet(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{StackExchange.Redis.RedisKey,StackExchange.Redis.RedisValue}})">
+            <summary>
+            保存多个key value
+            </summary>
+            <param name="keyValues">键值对</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringSet``1(System.String,``0,System.Nullable{System.TimeSpan})">
+            <summary>
+            保存一个对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="obj"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringSet``1(System.String,``0,System.DateTime)">
+            <summary>
+            保存一个对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="obj"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringGet(System.String)">
+            <summary>
+            获取单个key的值
+            </summary>
+            <param name="key">Redis Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringGet(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取多个Key
+            </summary>
+            <param name="listKey">Redis Key集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringGet``1(System.String)">
+            <summary>
+            获取一个key的对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringIncrement(System.String,System.Double)">
+            <summary>
+            为数字增长val
+            </summary>
+            <param name="key"></param>
+            <param name="val">可以为负</param>
+            <returns>增长后的值</returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringDecrement(System.String,System.Double)">
+            <summary>
+            为数字减少val
+            </summary>
+            <param name="key"></param>
+            <param name="val">可以为负</param>
+            <returns>减少后的值</returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringSetAsync(System.String,System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            保存单个key value
+            </summary>
+            <param name="key">Redis Key</param>
+            <param name="value">保存的值</param>
+            <param name="expiry">过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringSetAsync(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{StackExchange.Redis.RedisKey,StackExchange.Redis.RedisValue}})">
+            <summary>
+            保存多个key value
+            </summary>
+            <param name="keyValues">键值对</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringSetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})">
+            <summary>
+            保存一个对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="obj"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringGetAsync(System.String)">
+            <summary>
+            获取单个key的值
+            </summary>
+            <param name="key">Redis Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringGetAsync(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取多个Key
+            </summary>
+            <param name="listKey">Redis Key集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringGetAsync``1(System.String)">
+            <summary>
+            获取一个key的对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringIncrementAsync(System.String,System.Double)">
+            <summary>
+            为数字增长val
+            </summary>
+            <param name="key"></param>
+            <param name="val">可以为负</param>
+            <returns>增长后的值</returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.StringDecrementAsync(System.String,System.Double)">
+            <summary>
+            为数字减少val
+            </summary>
+            <param name="key"></param>
+            <param name="val">可以为负</param>
+            <returns>减少后的值</returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashExists(System.String,System.String)">
+            <summary>
+            判断某个数据是否已经被缓存
+            </summary>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashSet``1(System.String,System.String,``0)">
+            <summary>
+            存储数据到hash表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashDelete(System.String,System.String)">
+            <summary>
+            移除hash中的某值
+            </summary>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashDelete(System.String,System.Collections.Generic.List{StackExchange.Redis.RedisValue})">
+            <summary>
+            移除hash中的多个值
+            </summary>
+            <param name="key"></param>
+            <param name="dataKeys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashGet``1(System.String,System.String)">
+            <summary>
+            从hash表获取数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashIncrement(System.String,System.String,System.Double)">
+            <summary>
+            为数字增长val
+            </summary>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <param name="val">可以为负</param>
+            <returns>增长后的值</returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashDecrement(System.String,System.String,System.Double)">
+            <summary>
+            为数字减少val
+            </summary>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <param name="val">可以为负</param>
+            <returns>减少后的值</returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashKeys``1(System.String)">
+            <summary>
+            获取hashkey所有Redis key
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashValues``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashExistsAsync(System.String,System.String)">
+            <summary>
+            判断某个数据是否已经被缓存
+            </summary>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashSetAsync``1(System.String,System.String,``0)">
+            <summary>
+            存储数据到hash表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashDeleteAsync(System.String,System.String)">
+            <summary>
+            移除hash中的某值
+            </summary>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashDeleteAsync(System.String,System.Collections.Generic.List{StackExchange.Redis.RedisValue})">
+            <summary>
+            移除hash中的多个值
+            </summary>
+            <param name="key"></param>
+            <param name="dataKeys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashGeAsync``1(System.String,System.String)">
+            <summary>
+            从hash表获取数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashIncrementAsync(System.String,System.String,System.Double)">
+            <summary>
+            为数字增长val
+            </summary>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <param name="val">可以为负</param>
+            <returns>增长后的值</returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashDecrementAsync(System.String,System.String,System.Double)">
+            <summary>
+            为数字减少val
+            </summary>
+            <param name="key"></param>
+            <param name="dataKey"></param>
+            <param name="val">可以为负</param>
+            <returns>减少后的值</returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashKeysAsync``1(System.String)">
+            <summary>
+            获取hashkey所有Redis key
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashValuesAsync``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.HashValueAllAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListRemove``1(System.String,``0)">
+            <summary>
+            移除指定ListId的内部List的值
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListRange``1(System.String)">
+            <summary>
+            获取指定key的List
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListRightPush``1(System.String,``0)">
+            <summary>
+            插入元素到列表末尾
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListRightPop``1(System.String)">
+            <summary>
+            移除并返回列表末尾的元素
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListLeftPush``1(System.String,``0)">
+            <summary>
+            插入元素到列表列头
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListLeftPop``1(System.String)">
+            <summary>
+            移除并返回列表列头的元素
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListLength(System.String)">
+            <summary>
+            获取集合中的数量
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListRemoveAsync``1(System.String,``0)">
+            <summary>
+            移除指定ListId的内部List的值
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListRangeAsync``1(System.String)">
+            <summary>
+            获取指定key的List
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListRightPushAsync``1(System.String,``0)">
+            <summary>
+            插入元素到列表末尾
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListRightPopAsync``1(System.String)">
+            <summary>
+            移除并返回列表末尾的元素
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListLeftPushAsync``1(System.String,``0)">
+            <summary>
+            插入元素到列表列头
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListLeftPushRange``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            插入元素到列表列头
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListLeftPopAsync``1(System.String)">
+            <summary>
+            移除并返回列表列头的元素
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.ListLengthAsync(System.String)">
+            <summary>
+            获取集合中的数量
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.SortedSetAdd``1(System.String,``0,System.Double)">
+            <summary>
+            添加
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="score"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.SortedSetRemove``1(System.String,``0)">
+            <summary>
+            删除
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.SortedSetRangeByRank``1(System.String)">
+            <summary>
+            获取全部
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.SortedSetLength(System.String)">
+            <summary>
+            获取集合中的数量
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.SortedSetAddAsync``1(System.String,``0,System.Double)">
+            <summary>
+            添加
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="score"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.SortedSetRemoveAsync``1(System.String,``0)">
+            <summary>
+            删除
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.SortedSetRangeByRankAsync``1(System.String)">
+            <summary>
+            获取全部
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.SortedSetLengthAsync(System.String)">
+            <summary>
+            获取集合中的数量
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.KeyDelete(System.String)">
+            <summary>
+            删除单个key
+            </summary>
+            <param name="key">redis key</param>
+            <returns>是否删除成功</returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.KeyDelete(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除多个key
+            </summary>
+            <param name="keys">rediskey</param>
+            <returns>成功删除的个数</returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.KeyExists(System.String)">
+            <summary>
+            判断key是否存储
+            </summary>
+            <param name="key">redis key</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.KeyRename(System.String,System.String)">
+            <summary>
+            重新命名key
+            </summary>
+            <param name="key">就的redis key</param>
+            <param name="newKey">新的redis key</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.KeyExpire(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            设置Key的时间
+            </summary>
+            <param name="key">redis key</param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.GetAllCacheKeys">
+            <summary>
+            获取所有KEY
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.GetAll">
+            <summary>
+            获取所有KEY-Value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.Subscribe(System.String,System.Action{StackExchange.Redis.RedisChannel,StackExchange.Redis.RedisValue})">
+            <summary>
+            Redis发布订阅  订阅
+            </summary>
+            <param name="subChannel"></param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.Publish``1(System.String,``0)">
+            <summary>
+            Redis发布订阅  发布
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="channel"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.Unsubscribe(System.String)">
+            <summary>
+            Redis发布订阅  取消订阅
+            </summary>
+            <param name="channel"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisManager.UnsubscribeAll">
+            <summary>
+            Redis发布订阅  取消全部订阅
+            </summary>
+        </member>
+    </members>
+</doc>

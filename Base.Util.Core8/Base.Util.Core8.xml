@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Base.Util.Core8</name>
+    </assembly>
+    <members>
+        <member name="T:Base.Util.Core8.Cores.Base.ConfigureOptionCore">
+            <summary>
+            常用配置项 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.ConfigureOptionCore.AddConfigureOptionCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            常用配置项 注入
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:Base.Util.Core8.Cores.Base.CorsCore">
+            <summary>
+            跨域配置 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.CorsCore.AddCorsCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            跨域配置 注入
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.CorsCore.UseCorsCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            跨域配置 中间件
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Base.Util.Core8.Cores.Base.HealthCore">
+            <summary>
+            健康检查 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.HealthCore.AddHealthCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            健康检查 注入
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.HealthCore.UseHealthCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            健康检查 中间件
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Base.Util.Core8.Cores.Base.MVCCore">
+            <summary>
+            MVC 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.MVCCore.AddMVCCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            MVC 服务注入
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.MVCCore.AddMVCCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})">
+            <summary>
+            MVC 服务注入
+            </summary>
+            <param name="services"></param>
+            <param name="globalFliters">全局过滤器</param>
+            <param name="scopeFliters">指定过滤器</param>
+        </member>
+        <member name="T:Base.Util.Core8.Cores.Base.RouteEndpointCore">
+            <summary>
+            路由 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.RouteEndpointCore.AddRouteEndpointCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            路由 服务注入
+            </summary>
+            <param name="services">服务注入集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.RouteEndpointCore.UseRouteEndpointCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            路由 中间件
+            </summary>
+            <param name="app">应用程序构造器</param>
+            <returns></returns>
+        </member>
+        <member name="T:Base.Util.Core8.Cores.Base.SessionCore">
+            <summary>
+            Session 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.SessionCore.AddSessionCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Session 服务注入(通用配置)
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.SessionCore.UseSessionCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Session 中间件
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Base.Util.Core8.Cores.Base.SwaggerCore">
+            <summary>
+            Swagger 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.SwaggerCore.AddSwaggerCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Swagger 服务注入
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.SwaggerCore.AddSwaggerCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.List{System.String})">
+            <summary>
+            Swagger 服务注入
+            </summary>
+            <param name="services"></param>
+            <param name="xmlFiles"></param>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Base.SwaggerCore.UseSwaggerCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Swagger 中间件
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Base.Util.Core8.Cores.Extensions.ORM.SqlSugar.SqlSugarCore">
+            <summary>
+            SqlSugar服务 启动
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Extensions.ORM.SqlSugar.SqlSugarCore.AddSqlSugarCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            SqlSugar服务注入
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Extensions.ORM.SqlSugar.SqlSugarCore.UseSqlSugarCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            SqlSugar服务 中间件
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Base.Util.Core8.Customs.CustomCore">
+            <summary>
+            通用服务 启动
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Customs.CustomCore.AddCustomCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            自定义服务注入
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Base.Util.Core8.Customs.CustomCore.UseCustomCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            自定义 中间件
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Base.Util.Core8.Utils.AppSetting">
+            <summary>
+            配置读取类
+            </summary>
+        </member>
+        <member name="F:Base.Util.Core8.Utils.AppSetting._configuration">
+            <summary>
+            配置信息接口
+            </summary>
+        </member>
+        <member name="F:Base.Util.Core8.Utils.AppSetting.fileName">
+            <summary>
+            配置文件
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Utils.AppSetting.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Base.Util.Core8.Utils.AppSetting.GetConfiguration">
+            <summary>
+            获取配置信息接口
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Utils.AppSetting.GetSection(System.String)">
+            <summary>
+            获取配置信息（字符串）
+            </summary>
+            <param name="key">配置键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core8.Utils.AppSetting.GetSection``1(System.String)">
+            <summary>
+            获取配置信息（对象）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">配置键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core8.Utils.AppSetting.GetSections``1(System.String)">
+            <summary>
+            获取配置信息（集合）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">配置键</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>Base.Util.Repository.SqlSugarCore.xml</DocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Copyright>Base</Copyright>
+    <Description>Base: SqlSugar仓库组件</Description>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+    <Version>0.0.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Util.SqlSugarCore\Base.Util.SqlSugarCore.csproj" />
+  </ItemGroup>
+
+</Project>

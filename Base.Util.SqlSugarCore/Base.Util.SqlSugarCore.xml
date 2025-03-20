@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Base.Util.SqlSugarCore</name>
+    </assembly>
+    <members>
+        <member name="T:Base.Util.SqlSugarCore.IWorkUnit">
+            <summary>
+            工作单元接口
+            </summary>
+        </member>
+        <member name="M:Base.Util.SqlSugarCore.IWorkUnit.GetSqlSugarClient">
+            <summary>
+            获取SqlSugar中心
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.SqlSugarCore.IWorkUnit.BeginTransaction">
+            <summary>
+            开启事务
+            </summary>
+        </member>
+        <member name="M:Base.Util.SqlSugarCore.IWorkUnit.CommitTransaction">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:Base.Util.SqlSugarCore.IWorkUnit.RollbackTransaction">
+            <summary>
+            回滚事务
+            </summary>
+        </member>
+        <member name="T:Base.Util.SqlSugarCore.WorkUnit">
+            <summary>
+            工作单元服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.SqlSugarCore.WorkUnit.HasTransaction">
+            <summary>
+            确认当前状态是否开启事务
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

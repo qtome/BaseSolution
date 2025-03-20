@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>Base.Util.Redis.xml</DocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Copyright>Base</Copyright>
+    <Description>Base: StackExchange.Redis组件扩展</Description>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+    <Version>0.0.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" Version="2.8.31" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Util.Common\Base.Util.Common.csproj" />
+  </ItemGroup>
+
+</Project>
