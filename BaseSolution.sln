@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Util.Repository.SqlSug
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Util.SqlSugarCore", "Base.Util.SqlSugarCore\Base.Util.SqlSugarCore.csproj", "{CE0FC7B1-4D09-4FBB-9324-59A113AA8ADA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.AuthorityApi", "Base.AuthorityApi\Base.AuthorityApi.csproj", "{4147FCD1-CA8F-4A43-B343-DB3EC136BA55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{CE0FC7B1-4D09-4FBB-9324-59A113AA8ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE0FC7B1-4D09-4FBB-9324-59A113AA8ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE0FC7B1-4D09-4FBB-9324-59A113AA8ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4147FCD1-CA8F-4A43-B343-DB3EC136BA55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4147FCD1-CA8F-4A43-B343-DB3EC136BA55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4147FCD1-CA8F-4A43-B343-DB3EC136BA55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4147FCD1-CA8F-4A43-B343-DB3EC136BA55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,5 +77,6 @@ Global
 		{3DECC27B-49EC-4610-979B-C4587DDD472C} = {210B22BC-939B-4567-9CE2-12ADAC7AAEE4}
 		{1D3891D3-1740-439B-AC90-DF912A4F6782} = {210B22BC-939B-4567-9CE2-12ADAC7AAEE4}
 		{CE0FC7B1-4D09-4FBB-9324-59A113AA8ADA} = {210B22BC-939B-4567-9CE2-12ADAC7AAEE4}
+		{4147FCD1-CA8F-4A43-B343-DB3EC136BA55} = {54751A6A-2A61-4F06-B288-1D9313C724E0}
 	EndGlobalSection
 EndGlobal

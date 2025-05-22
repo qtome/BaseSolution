@@ -19,8 +19,6 @@ namespace Base.Util.Core8.Cores.Extensions
 
             services.AddSingleton(x =>
             {
-                bool isDevelop = Convert.ToBoolean(AppSetting.GetSection("Startup.Host.Develop"));
-                if (isDevelop == true) return new RedisConfig(null, null, null);
                 //配置信息
                 string pass = AppSetting.GetSection("Startup.Redis.Pass");
                 string customKey = AppSetting.GetSection("Startup.Redis.CustomKey");

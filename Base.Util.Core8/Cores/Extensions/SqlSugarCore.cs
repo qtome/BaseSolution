@@ -51,7 +51,7 @@ namespace Base.Util.Core8.Cores.Extensions
                     var sqlClient = new SqlSugarClient(listConfig);
                     return sqlClient;
                 });
-                services.AddScoped<IWorkUnit, WorkUnit>();
+                services.AddScoped<ISqlSugarWorkUnit, SqlSugarWorkUnit>();
             }
         }
 

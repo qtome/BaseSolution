@@ -6,12 +6,12 @@ namespace Base.Util.SqlSugarCore
     /// <summary>
     /// 工作单元服务
     /// </summary>
-    public class WorkUnit : IWorkUnit
+    public class SqlSugarWorkUnit : ISqlSugarWorkUnit
     {
 
         private readonly ISqlSugarClient _sqlSugarClient;
 
-        public WorkUnit(ISqlSugarClient sqlSugarClient)
+        public SqlSugarWorkUnit(ISqlSugarClient sqlSugarClient)
         {
             _sqlSugarClient = sqlSugarClient;
         }

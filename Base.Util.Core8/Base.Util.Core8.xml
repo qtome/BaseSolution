@@ -128,18 +128,29 @@
             </summary>
             <param name="app"></param>
         </member>
-        <member name="T:Base.Util.Core8.Cores.Extensions.ORM.SqlSugar.SqlSugarCore">
+        <member name="T:Base.Util.Core8.Cores.Extensions.RedisCore">
+            <summary>
+            Redis 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core8.Cores.Extensions.RedisCore.AddRedisCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Redis 注入
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:Base.Util.Core8.Cores.Extensions.SqlSugarCore">
             <summary>
             SqlSugar服务 启动
             </summary>
         </member>
-        <member name="M:Base.Util.Core8.Cores.Extensions.ORM.SqlSugar.SqlSugarCore.AddSqlSugarCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:Base.Util.Core8.Cores.Extensions.SqlSugarCore.AddSqlSugarCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             SqlSugar服务注入
             </summary>
             <param name="services"></param>
         </member>
-        <member name="M:Base.Util.Core8.Cores.Extensions.ORM.SqlSugar.SqlSugarCore.UseSqlSugarCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+        <member name="M:Base.Util.Core8.Cores.Extensions.SqlSugarCore.UseSqlSugarCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
             <summary>
             SqlSugar服务 中间件
             </summary>

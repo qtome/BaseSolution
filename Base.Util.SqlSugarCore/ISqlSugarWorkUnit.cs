@@ -5,7 +5,7 @@ namespace Base.Util.SqlSugarCore
     /// <summary>
     /// 工作单元接口
     /// </summary>
-    public interface IWorkUnit
+    public interface ISqlSugarWorkUnit
     {
         /// <summary>
         /// 获取SqlSugar中心

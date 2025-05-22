@@ -17,7 +17,7 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
         : IBaseRepository<TEntity>
         where TEntity : class, new()
     {
-        internal readonly IWorkUnit _workUnit;
+        internal readonly ISqlSugarWorkUnit _workUnit;
         internal ISqlSugarClient _sqlSugarClient;
         /// <summary>
         ///通过在子类的构造函数中注入，这里是基类，不用构造函数
@@ -44,7 +44,7 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
         private List<(Expression<Func<TEntity, object>>, bool)> OrderByExpressions { get; set; }
 
 
-        public BaseRepository(IWorkUnit workUnit)
+        public BaseRepository(ISqlSugarWorkUnit workUnit)
         {
             _workUnit = workUnit;
             _sqlSugarClient = workUnit.GetSqlSugarClient();

@@ -13,12 +13,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <Folder Include="Models\Common\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Common\" />
-    <Folder Include="Utils\" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>
