@@ -9,7 +9,7 @@
     <Copyright>Base</Copyright>
     <Description>Base: SqlSugar仓库组件</Description>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

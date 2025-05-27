@@ -10,7 +10,7 @@
     <Copyright>Base</Copyright>
     <Description>Base: .net core8.0 依赖注入组件</Description>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
-    <Version>0.0.1</Version>   
+    <Version>0.0.2</Version>   
   </PropertyGroup>
 
   <ItemGroup>
