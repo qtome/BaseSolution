@@ -10,20 +10,20 @@ namespace Base.Util.Repository.SqlSugarCore.Abstraction
     /// 基类服务接口
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public partial interface IBaseRepository<TEntity>
+    public partial interface ISqlSugarRepository<TEntity>
     {
         /// <summary>
         /// 下一次查询需要关联查询的属性
         /// </summary>
         /// <typeparam name="TProperty"></typeparam>
         /// <param name="include"></param>
-        IBaseRepository<TEntity> Include<TProperty>(Expression<Func<TEntity, TProperty>> include);
+        ISqlSugarRepository<TEntity> Include<TProperty>(Expression<Func<TEntity, TProperty>> include);
         /// <summary>
         /// 下一次查询需要关联查询的属性
         /// </summary>
         /// <typeparam name="TProperty"></typeparam>
         /// <param name="include"></param>
-        IBaseRepository<TEntity> Include<TProperty>(Expression<Func<TEntity, List<TProperty>>> include);
+        ISqlSugarRepository<TEntity> Include<TProperty>(Expression<Func<TEntity, List<TProperty>>> include);
         /// <summary>
         /// 下一次查询需要关联查询的属性（二级）
         /// </summary>
@@ -32,7 +32,7 @@ namespace Base.Util.Repository.SqlSugarCore.Abstraction
         /// <param name="include1"></param>
         /// <param name="include2"></param>
         /// <returns></returns>
-        IBaseRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, TProperty1>> include1, Expression<Func<TProperty1, TProperty2>> include2);
+        ISqlSugarRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, TProperty1>> include1, Expression<Func<TProperty1, TProperty2>> include2);
         /// <summary>
         /// 下一次查询需要关联查询的属性（二级）
         /// </summary>
@@ -41,7 +41,7 @@ namespace Base.Util.Repository.SqlSugarCore.Abstraction
         /// <param name="include1"></param>
         /// <param name="include2"></param>
         /// <returns></returns>
-        IBaseRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, TProperty1>> include1
+        ISqlSugarRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, TProperty1>> include1
             , Expression<Func<TProperty1, List<TProperty2>>> include2);
         /// <summary>
         /// 下一次查询需要关联查询的属性（二级）
@@ -51,7 +51,7 @@ namespace Base.Util.Repository.SqlSugarCore.Abstraction
         /// <param name="include1"></param>
         /// <param name="include2"></param>
         /// <returns></returns>
-        IBaseRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, List<TProperty1>>> include1
+        ISqlSugarRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, List<TProperty1>>> include1
             , Expression<Func<TProperty1, TProperty2>> include2);
         /// <summary>
         /// 下一次查询需要关联查询的属性（二级）
@@ -61,7 +61,7 @@ namespace Base.Util.Repository.SqlSugarCore.Abstraction
         /// <param name="include1"></param>
         /// <param name="include2"></param>
         /// <returns></returns>
-        IBaseRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, List<TProperty1>>> include1
+        ISqlSugarRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, List<TProperty1>>> include1
             , Expression<Func<TProperty1, List<TProperty2>>> include2);
         /// <summary>
         /// 下一次查询需要关联查询的属性（三级）
@@ -73,7 +73,7 @@ namespace Base.Util.Repository.SqlSugarCore.Abstraction
         /// <param name="include2"></param>
         /// <param name="include3"></param>
         /// <returns></returns>
-        IBaseRepository<TEntity> Include<TProperty1, TProperty2, TProperty3>(Expression<Func<TEntity, List<TProperty1>>> include1
+        ISqlSugarRepository<TEntity> Include<TProperty1, TProperty2, TProperty3>(Expression<Func<TEntity, List<TProperty1>>> include1
             , Expression<Func<TProperty1, List<TProperty2>>> include2
             , Expression<Func<TProperty2, List<TProperty3>>> include3);
 

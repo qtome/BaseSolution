@@ -4,6 +4,14 @@
         <name>Base.Util.Core8</name>
     </assembly>
     <members>
+        <member name="T:Base.Util.Core8.Controllers.BaseController">
+            <summary>
+            基类控制器
+            </summary>
+            <summary>
+            基类控制器 消息
+            </summary>
+        </member>
         <member name="T:Base.Util.Core8.Cores.Base.ConfigureOptionCore">
             <summary>
             常用配置项 启动服务

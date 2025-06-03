@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Base.AuthorityApi</name>
+    </assembly>
+    <members>
+        <member name="T:Base.AuthorityApi.Controller.BaseAuthorityController">
+            <summary>
+            权限基类控制器
+            </summary>
+        </member>
+        <member name="T:Base.AuthorityApi.Controller.TestsController">
+            <summary>
+            测试控制器
+            </summary>
+        </member>
+        <member name="M:Base.AuthorityApi.Controller.TestsController.TestMethod">
+            <summary>
+            测试方法
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

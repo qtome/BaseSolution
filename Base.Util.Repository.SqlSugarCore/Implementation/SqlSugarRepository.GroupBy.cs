@@ -8,7 +8,7 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
     /// <summary>
     /// 基类服务 -- 分组相关
     /// </summary>
-    public partial class BaseRepository<TEntity>
+    public partial class SqlSugarRepository<TEntity>
     {
         public (List<TEntity>, int) GroupByPageList(
             Expression<Func<TEntity, bool>> whereExpression

@@ -25,11 +25,13 @@
       "PolicyName": "CorsCustome" //策略名
     },
     "Swagger": {
-      "Title": "Custome API",
+      "Title": "Base.AuthorityApi API",
       "Version": "v1",
-      "Name": "Custome V1",
+      "Name": "Base.AuthorityApi V1",
       "XmlFiles": [
-        "Custome.xml"
+        "Base.AuthorityApi.xml",
+        "Base.Util.Core8.xml",
+        "Base.Util.Common.xml"
       ],
       "RoutePrefix": "swagger"
     }

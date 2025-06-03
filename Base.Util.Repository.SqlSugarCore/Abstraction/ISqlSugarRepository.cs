@@ -10,7 +10,7 @@ namespace Base.Util.Repository.SqlSugarCore.Abstraction
     /// 基类服务接口
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public partial interface IBaseRepository<TEntity>
+    public partial interface ISqlSugarRepository<TEntity>
         where TEntity : class
     {
         /// <summary>
@@ -18,14 +18,14 @@ namespace Base.Util.Repository.SqlSugarCore.Abstraction
         /// </summary>
         /// <param name="selectExpression">映射表达式</param>
         /// <returns></returns>
-        IBaseRepository<TEntity> Select(Expression<Func<TEntity, TEntity>> selectExpression);
+        ISqlSugarRepository<TEntity> Select(Expression<Func<TEntity, TEntity>> selectExpression);
         /// <summary>
         /// 排序
         /// </summary>
         /// <param name="orderByExpression">排序表达式</param>
         /// <param name="isDesc">是否是倒序</param>
         /// <returns></returns>
-        IBaseRepository<TEntity> OrderBy(Expression<Func<TEntity, object>> orderByExpression, bool isDesc = false);
+        ISqlSugarRepository<TEntity> OrderBy(Expression<Func<TEntity, object>> orderByExpression, bool isDesc = false);
         /// <summary>
         /// 新增数据
         /// </summary>

@@ -12,7 +12,7 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
     /// <summary>
     /// 基类服务 -- 联表相关
     /// </summary>
-    public partial class BaseRepository<TEntity>
+    public partial class SqlSugarRepository<TEntity>
     {
         public void BeginTransaction()
         {
@@ -30,7 +30,7 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
         }
 
 
-        public List<T> StoreProcedure<T>(StoredProcedureDto procedure) where T : new()
+        public List<T> StoreProcedure<T>(SqlSugarStoredProcedureDto procedure) where T : new()
         {
             try
             {
@@ -63,7 +63,7 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
             }
         }
 
-        public async Task<List<T>> StoreProcedureAsync<T>(StoredProcedureDto procedure) where T : new()
+        public async Task<List<T>> StoreProcedureAsync<T>(SqlSugarStoredProcedureDto procedure) where T : new()
         {
             try
             {

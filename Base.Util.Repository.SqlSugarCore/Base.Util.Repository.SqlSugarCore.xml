@@ -4,7 +4,7 @@
         <name>Base.Util.Repository.SqlSugarCore</name>
     </assembly>
     <members>
-        <member name="T:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1">
+        <member name="T:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1">
             <summary>
             基类服务接口
             </summary>
@@ -30,14 +30,14 @@
             </summary>
             <typeparam name="TEntity"></typeparam>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Select(System.Linq.Expressions.Expression{System.Func{`0,`0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Select(System.Linq.Expressions.Expression{System.Func{`0,`0}})">
             <summary>
             映射
             </summary>
             <param name="selectExpression">映射表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.OrderBy(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Boolean)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.OrderBy(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Boolean)">
             <summary>
             排序
             </summary>
@@ -45,133 +45,133 @@
             <param name="isDesc">是否是倒序</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Insert(`0[])">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Insert(`0[])">
             <summary>
             新增数据
             </summary>
             <param name="model">实体集合</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.InsertAsync(`0[])">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.InsertAsync(`0[])">
             <summary>
             新增数据（异步）
             </summary>
             <param name="model">实体集合</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Insert(System.Collections.Generic.IEnumerable{`0})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Insert(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             新增数据
             </summary>
             <param name="model">实体集合</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.InsertAsync(System.Collections.Generic.IEnumerable{`0})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.InsertAsync(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             新增数据（异步）
             </summary>
             <param name="model">实体集合</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Update(`0[])">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Update(`0[])">
             <summary>
             修改数据
             </summary>
             <param name="model">实体数组</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.UpdateAsync(`0[])">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.UpdateAsync(`0[])">
             <summary>
             修改数据（异步）
             </summary>
             <param name="model">实体数组</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Update(System.Collections.Generic.IEnumerable{`0})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Update(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             修改数据
             </summary>
             <param name="model">实体集合</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.UpdateAsync(System.Collections.Generic.IEnumerable{`0})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.UpdateAsync(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             修改数据（异步）
             </summary>
             <param name="model">实体集合</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.LogicDelete(`0[])">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.LogicDelete(`0[])">
             <summary>
             逻辑删除数据
             </summary>
             <param name="model">实体数组</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.LogicDeleteAsync(`0[])">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.LogicDeleteAsync(`0[])">
             <summary>
             逻辑删除数据（异步）
             </summary>
             <param name="model">实体数组</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.LogicDelete(System.Collections.Generic.IEnumerable{`0})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.LogicDelete(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             逻辑删除数据
             </summary>
             <param name="model">实体集合</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.LogicDeleteAsync(System.Collections.Generic.IEnumerable{`0})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.LogicDeleteAsync(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             逻辑删除数据（异步）
             </summary>
             <param name="model">实体集合</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Delete(`0[])">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Delete(`0[])">
             <summary>
             物理删除数据
             </summary>
             <param name="model">实体数组</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.DeleteAsync(`0[])">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.DeleteAsync(`0[])">
             <summary>
             物理删除数据（异步）
             </summary>
             <param name="model">实体数组</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Delete(System.Collections.Generic.IEnumerable{`0})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Delete(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             物理删除数据
             </summary>
             <param name="model">实体集合</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.DeleteAsync(System.Collections.Generic.IEnumerable{`0})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.DeleteAsync(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             物理删除数据（异步）
             </summary>
             <param name="model">实体集合</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             检查是否存在实体
             </summary>
             <param name="expression">查询表达式</param>
             <returns>true 存在  false 不存在</returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Find(System.Object)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Find(System.Object)">
             <summary>
             查找数据
             </summary>
             <param name="key">主键</param>
             <returns>逻辑删除数据 返回 null</returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Find(System.Object,System.Boolean)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Find(System.Object,System.Boolean)">
             <summary>
             查找数据
             </summary>
@@ -179,14 +179,14 @@
             <param name="logicDeleteJudge">是否需要逻辑删除判断</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             查找数据
             </summary>
             <param name="expression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
             <summary>
             查找数据
             </summary>
@@ -194,7 +194,7 @@
             <param name="orderByField">排序字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean)">
             <summary>
             查找数据
             </summary>
@@ -203,7 +203,7 @@
             <param name="isDesc">是否是倒叙</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
             <summary>
             查找数据
             </summary>
@@ -213,14 +213,14 @@
             <param name="thenByFields">再排序字段,倒叙true 正序false</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FindAsync(System.Object)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FindAsync(System.Object)">
             <summary>
             查找数据（异步）
             </summary>
             <param name="key">主键</param>
             <returns>逻辑删除数据 返回 null</returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FindAsync(System.Object,System.Boolean)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FindAsync(System.Object,System.Boolean)">
             <summary>
             查找数据（异步）
             </summary>
@@ -228,14 +228,14 @@
             <param name="logicDeleteJudge">是否需要逻辑删除判断</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             查找数据（异步）
             </summary>
             <param name="expression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
             <summary>
             查找数据（异步）
             </summary>
@@ -243,7 +243,7 @@
             <param name="orderByField">排序字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean)">
             <summary>
             查找数据（异步）
             </summary>
@@ -252,7 +252,7 @@
             <param name="isDesc">是否是倒叙</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
             <summary>
             查找数据（异步）
             </summary>
@@ -262,13 +262,13 @@
             <param name="thenByFields">再排序字段,倒叙true 正序false</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query">
             <summary>
             获取数据集合
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query(System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query(System.Int32,System.Int32)">
             <summary>
             获取数据集合
             </summary>
@@ -276,14 +276,14 @@
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             获取数据集合
             </summary>
             <param name="expression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32)">
             <summary>
             获取数据集合
             </summary>
@@ -292,7 +292,7 @@
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
             <summary>
             获取数据集合
             </summary>
@@ -300,7 +300,7 @@
             <param name="orderByField">排序字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32)">
             <summary>
             获取数据集合
             </summary>
@@ -310,7 +310,7 @@
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
             <summary>
             获取数据集合
             </summary>
@@ -319,7 +319,7 @@
             <param name="thenByFields">再排序字段,倒叙true 正序false</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32)">
             <summary>
             
             </summary>
@@ -330,7 +330,7 @@
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean)">
             <summary>
             获取数据集合
             </summary>
@@ -339,7 +339,7 @@
             <param name="isDesc">是否是倒叙</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32)">
             <summary>
             获取数据集合
             </summary>
@@ -350,17 +350,7 @@
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
-            <summary>
-            获取数据集合
-            </summary>
-            <param name="expression">查询表达式</param>
-            <param name="orderByField">排序字段</param>
-            <param name="isDesc">是否是倒叙</param>
-            <param name="thenByFields">再排序字段,倒叙true 正序false</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
             <summary>
             获取数据集合
             </summary>
@@ -368,17 +358,27 @@
             <param name="orderByField">排序字段</param>
             <param name="isDesc">是否是倒叙</param>
             <param name="thenByFields">再排序字段,倒叙true 正序false</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32)">
+            <summary>
+            获取数据集合
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="orderByField">排序字段</param>
+            <param name="isDesc">是否是倒叙</param>
+            <param name="thenByFields">再排序字段,倒叙true 正序false</param>
             <param name="pageIndex">分页数</param>
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList">
             <summary>
             获取数据集合
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList(System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList(System.Int32,System.Int32)">
             <summary>
             获取数据集合
             </summary>
@@ -386,14 +386,14 @@
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             获取数据集合
             </summary>
             <param name="expression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32)">
             <summary>
             获取数据集合
             </summary>
@@ -402,7 +402,7 @@
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
             <summary>
             获取数据集合
             </summary>
@@ -410,7 +410,7 @@
             <param name="orderByField">排序字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32)">
             <summary>
             获取数据集合
             </summary>
@@ -420,7 +420,7 @@
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
             <summary>
             获取数据集合
             </summary>
@@ -429,7 +429,7 @@
             <param name="thenByFields">再排序字段,倒叙true 正序false</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32)">
             <summary>
             
             </summary>
@@ -440,7 +440,7 @@
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean)">
             <summary>
             获取数据集合
             </summary>
@@ -449,7 +449,7 @@
             <param name="isDesc">是否是倒叙</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32)">
             <summary>
             获取数据集合
             </summary>
@@ -460,7 +460,7 @@
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
             <summary>
             获取数据集合
             </summary>
@@ -470,7 +470,7 @@
             <param name="thenByFields">再排序字段,倒叙true 正序false</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32)">
             <summary>
             获取数据集合
             </summary>
@@ -482,41 +482,33 @@
             <param name="pageSize">分页大小</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Count">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Count">
             <summary>
             Count 统计行
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.CountAsync">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.CountAsync">
             <summary>
             Count 统计行
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
-            <summary>
-            Count 统计行
-            </summary>
-            <param name="expression">查询表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Count 统计行
             </summary>
             <param name="expression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.CountInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Count 统计行
             </summary>
             <param name="expression">查询表达式</param>
-            <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.CountIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.CountInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             Count 统计行
             </summary>
@@ -524,7 +516,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.CountInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.CountIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             Count 统计行
             </summary>
@@ -532,7 +524,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.CountIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.CountInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             Count 统计行
             </summary>
@@ -540,7 +532,15 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Max``1(System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.CountIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+            <summary>
+            Count 统计行
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Max``1(System.String)">
             <summary>
             Max 取最大值
             </summary>
@@ -548,7 +548,7 @@
             <param name="maxField">MAX 计算字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.MaxAsync``1(System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.MaxAsync``1(System.String)">
             <summary>
             Max 取最大值
             </summary>
@@ -556,16 +556,7 @@
             <param name="maxField">MAX 计算字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Max``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
-            <summary>
-            Max 取最大值
-            </summary>
-            <typeparam name="TResult"></typeparam>
-            <param name="maxField">MAX 计算字段</param>
-            <param name="whereExpression">查询表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.MaxAsync``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Max``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Max 取最大值
             </summary>
@@ -574,7 +565,16 @@
             <param name="whereExpression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Max``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.MaxAsync``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Max 取最大值
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="maxField">MAX 计算字段</param>
+            <param name="whereExpression">查询表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Max``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             Max 取最大值
             </summary>
@@ -582,7 +582,7 @@
             <param name="expression">MAX 计算字段表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.MaxAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.MaxAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             Max 取最大值
             </summary>
@@ -590,16 +590,7 @@
             <param name="expression">MAX 计算字段表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Max``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
-            <summary>
-            Max 取最大值
-            </summary>
-            <typeparam name="TResult"></typeparam>
-            <param name="expression">MAX 计算字段表达式</param>
-            <param name="whereExpression">查询表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.MaxAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Max``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Max 取最大值
             </summary>
@@ -608,7 +599,16 @@
             <param name="whereExpression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Min``1(System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.MaxAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Max 取最大值
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="expression">MAX 计算字段表达式</param>
+            <param name="whereExpression">查询表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Min``1(System.String)">
             <summary>
             Min 取最小值
             </summary>
@@ -616,7 +616,7 @@
             <param name="minField">Min 计算字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.MinAsync``1(System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.MinAsync``1(System.String)">
             <summary>
             Min 取最小值
             </summary>
@@ -624,16 +624,7 @@
             <param name="minField">Min 计算字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Min``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
-            <summary>
-            Min 取最小值
-            </summary>
-            <typeparam name="TResult"></typeparam>
-            <param name="minField">Min 计算字段</param>
-            <param name="whereExpression">查询表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.MinAsync``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Min``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Min 取最小值
             </summary>
@@ -642,7 +633,16 @@
             <param name="whereExpression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Min``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.MinAsync``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Min 取最小值
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="minField">Min 计算字段</param>
+            <param name="whereExpression">查询表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Min``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             Min 取最小值
             </summary>
@@ -650,7 +650,7 @@
             <param name="expression">Min 计算字段表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.MinAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.MinAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             Min 取最小值
             </summary>
@@ -658,16 +658,7 @@
             <param name="expression">Min 计算字段表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Min``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
-            <summary>
-            Min 取最小值
-            </summary>
-            <typeparam name="TResult"></typeparam>
-            <param name="expression">Min 计算字段表达式</param>
-            <param name="whereExpression">查询表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.MinAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Min``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Min 取最小值
             </summary>
@@ -676,7 +667,16 @@
             <param name="whereExpression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Sum``1(System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.MinAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Min 取最小值
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="expression">Min 计算字段表达式</param>
+            <param name="whereExpression">查询表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Sum``1(System.String)">
             <summary>
             Sum 取求和
             </summary>
@@ -684,7 +684,7 @@
             <param name="sumField">Sum 计算字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.SumAsync``1(System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.SumAsync``1(System.String)">
             <summary>
             Sum 取求和
             </summary>
@@ -692,16 +692,7 @@
             <param name="sumField">Sum 计算字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Sum``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
-            <summary>
-            Sum 取求和
-            </summary>
-            <typeparam name="TResult"></typeparam>
-            <param name="sumField">Sum 计算字段</param>
-            <param name="whereExpression">查询表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.SumAsync``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Sum``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Sum 取求和
             </summary>
@@ -710,7 +701,16 @@
             <param name="whereExpression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Sum``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.SumAsync``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Sum 取求和
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="sumField">Sum 计算字段</param>
+            <param name="whereExpression">查询表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Sum``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             Sum 取求和
             </summary>
@@ -718,7 +718,7 @@
             <param name="expression">Sum 计算字段表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.SumAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.SumAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             Sum 取求和
             </summary>
@@ -726,16 +726,7 @@
             <param name="expression">Sum 计算字段表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Sum``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
-            <summary>
-            Sum 取求和
-            </summary>
-            <typeparam name="TResult"></typeparam>
-            <param name="expression">Sum 计算字段表达式</param>
-            <param name="whereExpression">查询表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.SumAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Sum``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Sum 取求和
             </summary>
@@ -744,7 +735,16 @@
             <param name="whereExpression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Avg``1(System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.SumAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Sum 取求和
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="expression">Sum 计算字段表达式</param>
+            <param name="whereExpression">查询表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Avg``1(System.String)">
             <Avgmary>
             Avg 取平均
             </Avgmary>
@@ -752,7 +752,7 @@
             <param name="avgField">Avg 计算字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.AvgAsync``1(System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.AvgAsync``1(System.String)">
             <Avgmary>
             Avg 取平均
             </Avgmary>
@@ -760,7 +760,7 @@
             <param name="avgField">Avg 计算字段</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Avg``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Avg``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <Avgmary>
             Avg 取平均
             </Avgmary>
@@ -769,7 +769,7 @@
             <param name="whereExpression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.AvgAsync``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.AvgAsync``1(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <Avgmary>
             Avg 取平均
             </Avgmary>
@@ -778,7 +778,7 @@
             <param name="whereExpression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Avg``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Avg``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <Avgmary>
             Avg 取平均
             </Avgmary>
@@ -786,7 +786,7 @@
             <param name="expression">Avg 计算字段表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.AvgAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.AvgAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <Avgmary>
             Avg 取平均
             </Avgmary>
@@ -794,16 +794,7 @@
             <param name="expression">Avg 计算字段表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Avg``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
-            <Avgmary>
-            Avg 取平均
-            </Avgmary>
-            <typeparam name="TResult"></typeparam>
-            <param name="expression">Avg 计算字段表达式</param>
-            <param name="whereExpression">查询表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.AvgAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Avg``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <Avgmary>
             Avg 取平均
             </Avgmary>
@@ -812,7 +803,16 @@
             <param name="whereExpression">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.GroupByPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,`0}},System.Int32,System.Int32,System.Boolean)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.AvgAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <Avgmary>
+            Avg 取平均
+            </Avgmary>
+            <typeparam name="TResult"></typeparam>
+            <param name="expression">Avg 计算字段表达式</param>
+            <param name="whereExpression">查询表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.GroupByPageList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,`0}},System.Int32,System.Int32,System.Boolean)">
             <summary>
             分组 分页方法
             </summary>
@@ -825,7 +825,7 @@
             <param name="pageSize"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.GroupBy(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,`0}},System.Boolean)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.GroupBy(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,`0}},System.Boolean)">
             <summary>
             分组 分页方法
             </summary>
@@ -836,21 +836,21 @@
             <param name="selectExpression"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Include``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Include``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             下一次查询需要关联查询的属性
             </summary>
             <typeparam name="TProperty"></typeparam>
             <param name="include"></param>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Include``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Include``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             下一次查询需要关联查询的属性
             </summary>
             <typeparam name="TProperty"></typeparam>
             <param name="include"></param>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Include``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Include``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
             <summary>
             下一次查询需要关联查询的属性（二级）
             </summary>
@@ -860,7 +860,7 @@
             <param name="include2"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Include``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.List{``1}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Include``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.List{``1}}})">
             <summary>
             下一次查询需要关联查询的属性（二级）
             </summary>
@@ -870,7 +870,7 @@
             <param name="include2"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Include``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Include``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
             <summary>
             下一次查询需要关联查询的属性（二级）
             </summary>
@@ -880,7 +880,7 @@
             <param name="include2"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Include``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.List{``1}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Include``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.List{``1}}})">
             <summary>
             下一次查询需要关联查询的属性（二级）
             </summary>
@@ -890,7 +890,7 @@
             <param name="include2"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.Include``3(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.List{``1}}},System.Linq.Expressions.Expression{System.Func{``1,System.Collections.Generic.List{``2}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.Include``3(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.List{``1}}},System.Linq.Expressions.Expression{System.Func{``1,System.Collections.Generic.List{``2}}})">
             <summary>
             下一次查询需要关联查询的属性（三级）
             </summary>
@@ -902,88 +902,43 @@
             <param name="include3"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             查找数据
             </summary>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
-            <summary>
-            查找数据
-            </summary>
-            <param name="expression">查询表达式</param>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             查找数据
             </summary>
             <param name="expression">查询表达式</param>
-            <param name="orderByField">排序字段</param>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             查找数据
             </summary>
             <param name="expression">查询表达式</param>
             <param name="orderByField">排序字段</param>
-            <param name="isDesc">是否是倒叙</param>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             查找数据
             </summary>
             <param name="expression">查询表达式</param>
             <param name="orderByField">排序字段</param>
             <param name="isDesc">是否是倒叙</param>
-            <param name="thenByFields">再排序字段,倒叙true 正序false</param>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
-            查找数据（异步）
-            </summary>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
-            <summary>
-            查找数据（异步）
-            </summary>
-            <param name="expression">查询表达式</param>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
-            <summary>
-            查找数据（异步）
-            </summary>
-            <param name="expression">查询表达式</param>
-            <param name="orderByField">排序字段</param>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
-            <summary>
-            查找数据（异步）
-            </summary>
-            <param name="expression">查询表达式</param>
-            <param name="orderByField">排序字段</param>
-            <param name="isDesc">是否是倒叙</param>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
-            <summary>
-            查找数据（异步）
+            查找数据
             </summary>
             <param name="expression">查询表达式</param>
             <param name="orderByField">排序字段</param>
@@ -992,14 +947,59 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            查找数据（异步）
+            </summary>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            查找数据（异步）
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            查找数据（异步）
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="orderByField">排序字段</param>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            查找数据（异步）
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="orderByField">排序字段</param>
+            <param name="isDesc">是否是倒叙</param>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            查找数据（异步）
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="orderByField">排序字段</param>
+            <param name="isDesc">是否是倒叙</param>
+            <param name="thenByFields">再排序字段,倒叙true 正序false</param>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1008,7 +1008,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1016,7 +1016,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1026,7 +1026,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1035,7 +1035,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1046,7 +1046,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1056,7 +1056,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             
             </summary>
@@ -1068,7 +1068,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1078,7 +1078,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1090,18 +1090,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
-            <summary>
-            获取数据集合
-            </summary>
-            <param name="expression">查询表达式</param>
-            <param name="orderByField">排序字段</param>
-            <param name="isDesc">是否是倒叙</param>
-            <param name="thenByFields">再排序字段,倒叙true 正序false</param>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1109,19 +1098,30 @@
             <param name="orderByField">排序字段</param>
             <param name="isDesc">是否是倒叙</param>
             <param name="thenByFields">再排序字段,倒叙true 正序false</param>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            获取数据集合
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="orderByField">排序字段</param>
+            <param name="isDesc">是否是倒叙</param>
+            <param name="thenByFields">再排序字段,倒叙true 正序false</param>
             <param name="pageIndex">分页数</param>
             <param name="pageSize">分页大小</param>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1130,7 +1130,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1138,7 +1138,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1148,7 +1148,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1157,7 +1157,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1168,7 +1168,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1178,7 +1178,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             
             </summary>
@@ -1190,7 +1190,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1200,7 +1200,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1212,7 +1212,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1223,7 +1223,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据集合
             </summary>
@@ -1236,88 +1236,43 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             查找数据
             </summary>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
-            <summary>
-            查找数据
-            </summary>
-            <param name="expression">查询表达式</param>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             查找数据
             </summary>
             <param name="expression">查询表达式</param>
-            <param name="orderByField">排序字段</param>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             查找数据
             </summary>
             <param name="expression">查询表达式</param>
             <param name="orderByField">排序字段</param>
-            <param name="isDesc">是否是倒叙</param>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             查找数据
             </summary>
             <param name="expression">查询表达式</param>
             <param name="orderByField">排序字段</param>
             <param name="isDesc">是否是倒叙</param>
-            <param name="thenByFields">再排序字段,倒叙true 正序false</param>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
-            查找数据（异步）
-            </summary>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
-            <summary>
-            查找数据（异步）
-            </summary>
-            <param name="expression">查询表达式</param>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
-            <summary>
-            查找数据（异步）
-            </summary>
-            <param name="expression">查询表达式</param>
-            <param name="orderByField">排序字段</param>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
-            <summary>
-            查找数据（异步）
-            </summary>
-            <param name="expression">查询表达式</param>
-            <param name="orderByField">排序字段</param>
-            <param name="isDesc">是否是倒叙</param>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
-            <summary>
-            查找数据（异步）
+            查找数据
             </summary>
             <param name="expression">查询表达式</param>
             <param name="orderByField">排序字段</param>
@@ -1326,14 +1281,59 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+            <summary>
+            查找数据（异步）
+            </summary>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+            <summary>
+            查找数据（异步）
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+            <summary>
+            查找数据（异步）
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="orderByField">排序字段</param>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+            <summary>
+            查找数据（异步）
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="orderByField">排序字段</param>
+            <param name="isDesc">是否是倒叙</param>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.FirstOrDefaultIncludeAsync``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+            <summary>
+            查找数据（异步）
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="orderByField">排序字段</param>
+            <param name="isDesc">是否是倒叙</param>
+            <param name="thenByFields">再排序字段,倒叙true 正序false</param>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1342,7 +1342,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1350,7 +1350,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1360,7 +1360,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1369,7 +1369,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1380,7 +1380,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1390,7 +1390,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             
             </summary>
@@ -1402,7 +1402,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1412,7 +1412,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1424,18 +1424,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
-            <summary>
-            获取数据集合
-            </summary>
-            <param name="expression">查询表达式</param>
-            <param name="orderByField">排序字段</param>
-            <param name="isDesc">是否是倒叙</param>
-            <param name="thenByFields">再排序字段,倒叙true 正序false</param>
-            <param name="include">包含关联表表达式</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1443,19 +1432,30 @@
             <param name="orderByField">排序字段</param>
             <param name="isDesc">是否是倒叙</param>
             <param name="thenByFields">再排序字段,倒叙true 正序false</param>
+            <param name="include">包含关联表表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+            <summary>
+            获取数据集合
+            </summary>
+            <param name="expression">查询表达式</param>
+            <param name="orderByField">排序字段</param>
+            <param name="isDesc">是否是倒叙</param>
+            <param name="thenByFields">再排序字段,倒叙true 正序false</param>
             <param name="pageIndex">分页数</param>
             <param name="pageSize">分页大小</param>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1464,7 +1464,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1472,7 +1472,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1482,7 +1482,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1491,7 +1491,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1502,7 +1502,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1512,7 +1512,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             
             </summary>
@@ -1524,7 +1524,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1534,7 +1534,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1546,7 +1546,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1557,7 +1557,7 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.QueryPageListInclude``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据集合
             </summary>
@@ -1570,14 +1570,14 @@
             <param name="include">包含关联表表达式</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.InnerJoin``1(System.Linq.Expressions.Expression{System.Func{`0,``0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.InnerJoin``1(System.Linq.Expressions.Expression{System.Func{`0,``0,System.Boolean}})">
             <summary>
             下一次 inner 联表查询
             </summary>
             <typeparam name="TEntity2"></typeparam>
             <param name="joinExpression"></param>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.InnerJoin``2(System.Linq.Expressions.Expression{System.Func{`0,``0,``1,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.InnerJoin``2(System.Linq.Expressions.Expression{System.Func{`0,``0,``1,System.Boolean}})">
             <summary>
             下一次 inner 联表查询
             </summary>
@@ -1586,36 +1586,36 @@
             <param name="joinExpression"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.StoreProcedure``1(Base.Util.Repository.SqlSugarCore.Models.StoredProcedureDto)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.StoreProcedure``1(Base.Util.Repository.SqlSugarCore.Models.SqlSugarStoredProcedureDto)">
             <summary>
             执行存储过程
             </summary>
             <param name="procedure">存储过程信息</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.StoreProcedureAsync``1(Base.Util.Repository.SqlSugarCore.Models.StoredProcedureDto)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.StoreProcedureAsync``1(Base.Util.Repository.SqlSugarCore.Models.SqlSugarStoredProcedureDto)">
             <summary>
             执行存储过程（异步）
             </summary>
             <param name="procedure">存储过程信息</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.BeginTransaction">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.BeginTransaction">
             <summary>
             开启事务
             </summary>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.CommitTransaction">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.CommitTransaction">
             <summary>
             提交事务
             </summary>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.IBaseRepository`1.RollbackTransaction">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Abstraction.ISqlSugarRepository`1.RollbackTransaction">
             <summary>
             回滚事务
             </summary>
         </member>
-        <member name="T:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1">
+        <member name="T:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1">
             <summary>
             基类服务
             </summary>
@@ -1636,22 +1636,22 @@
             基类服务 -- 联表相关
             </summary>
         </member>
-        <member name="P:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1._baseContext">
+        <member name="P:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1._baseContext">
              <summary>
             通过在子类的构造函数中注入，这里是基类，不用构造函数
              </summary>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1.Dispose">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1.Dispose">
             <summary>
             释放资源
             </summary>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1.GetQueryable">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1.GetQueryable">
             <summary>
             获取查询数据源
             </summary>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1.GetQueryableEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1.GetQueryableEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
             <summary>
             获取查询集合
             </summary>
@@ -1661,14 +1661,14 @@
             <param name="thenByFields"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1.GetQueryEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1.GetQueryEntities(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             获取数据源集合（过滤）
             </summary>
             <param name="expression"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1.GetOrderFiledString(System.String,System.Boolean)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1.GetOrderFiledString(System.String,System.Boolean)">
             <summary>
             获取排序字段
             </summary>
@@ -1676,7 +1676,7 @@
             <param name="isDesc"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1.GetQueryableEntities``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1.GetQueryableEntities``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取查询集合（涉包含）
             </summary>
@@ -1688,7 +1688,7 @@
             <param name="include"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1.GetQueryableEntities``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1.GetQueryableEntities``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取查询集合（涉包含）
             </summary>
@@ -1700,7 +1700,7 @@
             <param name="include"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1.GetQueryEntities``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1.GetQueryEntities``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             获取数据源集合（过滤）
             </summary>
@@ -1708,7 +1708,7 @@
             <param name="include"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1.GetQueryEntities``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1.GetQueryEntities``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.List{``0}}})">
             <summary>
             获取数据源集合（过滤）
             </summary>
@@ -1716,12 +1716,12 @@
             <param name="include"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1.IsDmDataBase">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1.IsDmDataBase">
             <summary>
             判断是否是达梦数据库
             </summary>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.BaseRepository`1.DataTableToList``1(System.Data.DataTable)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Implementation.SqlSugarRepository`1.DataTableToList``1(System.Data.DataTable)">
             <summary>
             DataTable所有数据转换成实体类列表
             </summary>
@@ -1729,85 +1729,85 @@
             <param name="dt">DataTable</param>
             <returns>返回实体类列表</returns>
         </member>
-        <member name="T:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureDto">
+        <member name="T:Base.Util.Repository.SqlSugarCore.Models.SqlSugarStoredProcedureDto">
             <summary>
             存储过程类
             </summary>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureDto.#ctor">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Models.SqlSugarStoredProcedureDto.#ctor">
             <summary>
             构造函数
             </summary>
         </member>
-        <member name="P:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureDto.ProcedureName">
+        <member name="P:Base.Util.Repository.SqlSugarCore.Models.SqlSugarStoredProcedureDto.ProcedureName">
             <summary>
             存储过程名称
             </summary>
         </member>
-        <member name="P:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureDto.Parameters">
+        <member name="P:Base.Util.Repository.SqlSugarCore.Models.SqlSugarStoredProcedureDto.Parameters">
             <summary>
             参数集合
             </summary>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureDto.AddParameter(System.String,System.Object)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Models.SqlSugarStoredProcedureDto.AddParameter(System.String,System.Object)">
             <summary>
             添加参数
             </summary>
             <param name="name">参数名</param>
             <param name="value">参数值</param>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureDto.AddOutputParameter(System.String,System.Object)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Models.SqlSugarStoredProcedureDto.AddOutputParameter(System.String,System.Object)">
             <summary>
             添加输出参数
             </summary>
             <param name="name">参数名</param>
             <param name="value">参数值</param>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureDto.AddIntputOutputParameter(System.String,System.Object)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Models.SqlSugarStoredProcedureDto.AddIntputOutputParameter(System.String,System.Object)">
             <summary>
             添加输入输出参数
             </summary>
             <param name="name">参数名</param>
             <param name="value">参数值</param>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureDto.Create(System.String)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Models.SqlSugarStoredProcedureDto.Create(System.String)">
             <summary>
             创建实例
             </summary>
             <param name="name">存储过程名称</param>
             <returns></returns>
         </member>
-        <member name="T:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureParameter">
+        <member name="T:Base.Util.Repository.SqlSugarCore.Models.SqlSugarSqlSugarStoredProcedureParameter">
             <summary>
             存储过程参数
             </summary>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureParameter.#ctor">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Models.SqlSugarSqlSugarStoredProcedureParameter.#ctor">
             <summary>
             构造函数
             </summary>
         </member>
-        <member name="P:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureParameter.ParameterName">
+        <member name="P:Base.Util.Repository.SqlSugarCore.Models.SqlSugarSqlSugarStoredProcedureParameter.ParameterName">
             <summary>
             参数名
             </summary>
         </member>
-        <member name="P:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureParameter.Value">
+        <member name="P:Base.Util.Repository.SqlSugarCore.Models.SqlSugarSqlSugarStoredProcedureParameter.Value">
             <summary>
             参数值
             </summary>
         </member>
-        <member name="P:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureParameter.Direction">
+        <member name="P:Base.Util.Repository.SqlSugarCore.Models.SqlSugarSqlSugarStoredProcedureParameter.Direction">
             <summary>
             参数方向
             </summary>
         </member>
-        <member name="P:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureParameter.IsOutput">
+        <member name="P:Base.Util.Repository.SqlSugarCore.Models.SqlSugarSqlSugarStoredProcedureParameter.IsOutput">
             <summary>
             是否是输出参数
             </summary>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureParameter.CreateInput(System.String,System.Object)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Models.SqlSugarSqlSugarStoredProcedureParameter.CreateInput(System.String,System.Object)">
             <summary>
             创建参数
             </summary>
@@ -1815,7 +1815,7 @@
             <param name="value">参数值</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureParameter.CreateOutput(System.String,System.Object)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Models.SqlSugarSqlSugarStoredProcedureParameter.CreateOutput(System.String,System.Object)">
             <summary>
             创建输出参数
             </summary>
@@ -1823,7 +1823,7 @@
             <param name="value">参数值</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Repository.SqlSugarCore.Models.StoredProcedureParameter.CreateInputOutput(System.String,System.Object)">
+        <member name="M:Base.Util.Repository.SqlSugarCore.Models.SqlSugarSqlSugarStoredProcedureParameter.CreateInputOutput(System.String,System.Object)">
             <summary>
             创建输出参数
             </summary>

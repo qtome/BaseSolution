@@ -9,7 +9,7 @@ namespace Base.Util.Repository.SqlSugarCore.Abstraction
     /// 基类服务接口
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public partial interface IBaseRepository<TEntity>
+    public partial interface ISqlSugarRepository<TEntity>
     {
         /// <summary>
         /// Count 统计行

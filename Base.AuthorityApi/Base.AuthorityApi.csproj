@@ -4,6 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>Base.AuthorityApi.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controller\" />
+    <Content Update="appsetting.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

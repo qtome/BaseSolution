@@ -1,10 +1,10 @@
 ﻿using Base.Util.Core8.Cores.Base;
+using Base.Util.Core8.Cores.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Base.Util.Core8.Customs
 {
-
     /// <summary>
     /// 通用服务 启动
     /// </summary>
@@ -29,8 +29,13 @@ namespace Base.Util.Core8.Customs
             services.AddRouteEndpointCore();
             //Session配置
             services.AddSessionCore();
-            // Swagger配置
+            //Swagger配置
             services.AddSwaggerCore();
+
+            //SqlSugar配置
+            services.AddSqlSugarCore();
+            //Redis配置
+            services.AddRedisCore();
         }
 
 
@@ -50,8 +55,11 @@ namespace Base.Util.Core8.Customs
             app.UseCorsCore();
             //Session配置
             app.UseSessionCore();
-            // Swagger中间件
+            //Swagger中间件
             app.UseSwaggerCore();
+
+            //SqlSugar中间件
+            app.UseSqlSugarCore();
         }
     }
 }

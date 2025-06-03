@@ -13,8 +13,8 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
     /// 基类服务
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public partial class BaseRepository<TEntity>
-        : IBaseRepository<TEntity>
+    public partial class SqlSugarRepository<TEntity>
+        : ISqlSugarRepository<TEntity>
         where TEntity : class, new()
     {
         internal readonly ISqlSugarWorkUnit _workUnit;
@@ -44,13 +44,13 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
         private List<(Expression<Func<TEntity, object>>, bool)> OrderByExpressions { get; set; }
 
 
-        public BaseRepository(ISqlSugarWorkUnit workUnit)
+        public SqlSugarRepository(ISqlSugarWorkUnit workUnit)
         {
             _workUnit = workUnit;
             _sqlSugarClient = workUnit.GetSqlSugarClient();
         }
 
-        public BaseRepository(BaseRepository<TEntity> baseRepository)
+        public SqlSugarRepository(SqlSugarRepository<TEntity> baseRepository)
         {
             _workUnit = baseRepository._workUnit;
             _sqlSugarClient = baseRepository._sqlSugarClient;
@@ -67,7 +67,7 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
             }
         }
 
-        public IBaseRepository<TEntity> Select(Expression<Func<TEntity, TEntity>> selectExpression)
+        public ISqlSugarRepository<TEntity> Select(Expression<Func<TEntity, TEntity>> selectExpression)
         {
             if (selectExpression != null)
             {
@@ -76,7 +76,7 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
             return this;
         }
 
-        public IBaseRepository<TEntity> OrderBy(Expression<Func<TEntity, object>> orderByExpression, bool isDesc = false)
+        public ISqlSugarRepository<TEntity> OrderBy(Expression<Func<TEntity, object>> orderByExpression, bool isDesc = false)
         {
             if (orderByExpression != null)
             {

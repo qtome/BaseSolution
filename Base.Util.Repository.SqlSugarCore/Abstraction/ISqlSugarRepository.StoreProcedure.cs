@@ -8,20 +8,20 @@ namespace Base.Util.Repository.SqlSugarCore.Abstraction
     /// 基类服务接口
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public partial interface IBaseRepository<TEntity>
+    public partial interface ISqlSugarRepository<TEntity>
     {
         /// <summary>
         /// 执行存储过程
         /// </summary>
         /// <param name="procedure">存储过程信息</param>
         /// <returns></returns>
-        List<T> StoreProcedure<T>(StoredProcedureDto procedure) where T : new();
+        List<T> StoreProcedure<T>(SqlSugarStoredProcedureDto procedure) where T : new();
         /// <summary>
         /// 执行存储过程（异步）
         /// </summary>
         /// <param name="procedure">存储过程信息</param>
         /// <returns></returns>
-        Task<List<T>> StoreProcedureAsync<T>(StoredProcedureDto procedure) where T : new();
+        Task<List<T>> StoreProcedureAsync<T>(SqlSugarStoredProcedureDto procedure) where T : new();
         /// <summary>
         /// 开启事务
         /// </summary>

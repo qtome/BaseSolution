@@ -11,30 +11,30 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
     /// <summary>
     /// 基类服务 -- 联表相关
     /// </summary>
-    public partial class BaseRepository<TEntity>
+    public partial class SqlSugarRepository<TEntity>
     {
-        public IBaseRepository<TEntity> Include<TProperty>(Expression<Func<TEntity, TProperty>> include)
+        public ISqlSugarRepository<TEntity> Include<TProperty>(Expression<Func<TEntity, TProperty>> include)
         {
             if (this.Queryable == null) Queryable = _baseContext.Queryable<TEntity>();
             Queryable.Includes(include);
             return this;
         }
 
-        public IBaseRepository<TEntity> Include<TProperty>(Expression<Func<TEntity, List<TProperty>>> include)
+        public ISqlSugarRepository<TEntity> Include<TProperty>(Expression<Func<TEntity, List<TProperty>>> include)
         {
             if (this.Queryable == null) Queryable = _baseContext.Queryable<TEntity>();
             Queryable.Includes(include);
             return this;
         }
 
-        public IBaseRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, TProperty1>> include1, Expression<Func<TProperty1, TProperty2>> include2)
+        public ISqlSugarRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, TProperty1>> include1, Expression<Func<TProperty1, TProperty2>> include2)
         {
             if (this.Queryable == null) Queryable = _baseContext.Queryable<TEntity>();
             Queryable.Includes(include1, include2);
             return this;
         }
 
-        public IBaseRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, TProperty1>> include1
+        public ISqlSugarRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, TProperty1>> include1
             , Expression<Func<TProperty1, List<TProperty2>>> include2)
         {
             if (this.Queryable == null) Queryable = _baseContext.Queryable<TEntity>();
@@ -42,7 +42,7 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
             return this;
         }
 
-        public IBaseRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, List<TProperty1>>> include1
+        public ISqlSugarRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, List<TProperty1>>> include1
             , Expression<Func<TProperty1, TProperty2>> include2)
         {
             if (this.Queryable == null) Queryable = _baseContext.Queryable<TEntity>();
@@ -50,7 +50,7 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
             return this;
         }
 
-        public IBaseRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, List<TProperty1>>> include1
+        public ISqlSugarRepository<TEntity> Include<TProperty1, TProperty2>(Expression<Func<TEntity, List<TProperty1>>> include1
             , Expression<Func<TProperty1, List<TProperty2>>> include2)
         {
             if (this.Queryable == null) Queryable = _baseContext.Queryable<TEntity>();
@@ -58,7 +58,7 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
             return this;
         }
 
-        public IBaseRepository<TEntity> Include<TProperty1, TProperty2, TProperty3>(Expression<Func<TEntity, List<TProperty1>>> include1
+        public ISqlSugarRepository<TEntity> Include<TProperty1, TProperty2, TProperty3>(Expression<Func<TEntity, List<TProperty1>>> include1
             , Expression<Func<TProperty1, List<TProperty2>>> include2
             , Expression<Func<TProperty2, List<TProperty3>>> include3)
         {

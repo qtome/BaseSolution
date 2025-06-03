@@ -6,14 +6,14 @@ namespace Base.Util.Repository.SqlSugarCore.Models
     /// <summary>
     /// 存储过程类
     /// </summary>
-    public class StoredProcedureDto
+    public class SqlSugarStoredProcedureDto
     {
         /// <summary>
         /// 构造函数
         /// </summary>
-        private StoredProcedureDto()
+        private SqlSugarStoredProcedureDto()
         {
-            Parameters = new List<StoredProcedureParameter>();
+            Parameters = new List<SqlSugarSqlSugarStoredProcedureParameter>();
         }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace Base.Util.Repository.SqlSugarCore.Models
         /// <summary>
         /// 参数集合
         /// </summary>
-        public List<StoredProcedureParameter> Parameters { get; set; }
+        public List<SqlSugarSqlSugarStoredProcedureParameter> Parameters { get; set; }
 
         /// <summary>
         /// 添加参数
@@ -32,7 +32,7 @@ namespace Base.Util.Repository.SqlSugarCore.Models
         /// <param name="value">参数值</param>
         public void AddParameter(string name, object value)
         {
-            Parameters.Add(StoredProcedureParameter.CreateInput(name, value));
+            Parameters.Add(SqlSugarSqlSugarStoredProcedureParameter.CreateInput(name, value));
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace Base.Util.Repository.SqlSugarCore.Models
         /// <param name="value">参数值</param>
         public void AddOutputParameter(string name, object value)
         {
-            Parameters.Add(StoredProcedureParameter.CreateOutput(name, value));
+            Parameters.Add(SqlSugarSqlSugarStoredProcedureParameter.CreateOutput(name, value));
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Base.Util.Repository.SqlSugarCore.Models
         /// <param name="value">参数值</param>
         public void AddIntputOutputParameter(string name, object value)
         {
-            Parameters.Add(StoredProcedureParameter.CreateInputOutput(name, value));
+            Parameters.Add(SqlSugarSqlSugarStoredProcedureParameter.CreateInputOutput(name, value));
         }
 
         /// <summary>
@@ -60,9 +60,9 @@ namespace Base.Util.Repository.SqlSugarCore.Models
         /// </summary>
         /// <param name="name">存储过程名称</param>
         /// <returns></returns>
-        public static StoredProcedureDto Create(string name)
+        public static SqlSugarStoredProcedureDto Create(string name)
         {
-            return new StoredProcedureDto()
+            return new SqlSugarStoredProcedureDto()
             {
                 ProcedureName = name,
             };
@@ -72,12 +72,12 @@ namespace Base.Util.Repository.SqlSugarCore.Models
     /// <summary>
     /// 存储过程参数
     /// </summary>
-    public class StoredProcedureParameter
+    public class SqlSugarSqlSugarStoredProcedureParameter
     {
         /// <summary>
         /// 构造函数
         /// </summary>
-        private StoredProcedureParameter()
+        private SqlSugarSqlSugarStoredProcedureParameter()
         {
         }
 
@@ -106,9 +106,9 @@ namespace Base.Util.Repository.SqlSugarCore.Models
         /// <param name="name">参数名</param>
         /// <param name="value">参数值</param>
         /// <returns></returns>
-        public static StoredProcedureParameter CreateInput(string name, object value)
+        public static SqlSugarSqlSugarStoredProcedureParameter CreateInput(string name, object value)
         {
-            return new StoredProcedureParameter()
+            return new SqlSugarSqlSugarStoredProcedureParameter()
             {
                 ParameterName = name,
                 Value = value,
@@ -122,9 +122,9 @@ namespace Base.Util.Repository.SqlSugarCore.Models
         /// <param name="name">参数名</param>
         /// <param name="value">参数值</param>
         /// <returns></returns>
-        public static StoredProcedureParameter CreateOutput(string name, object value)
+        public static SqlSugarSqlSugarStoredProcedureParameter CreateOutput(string name, object value)
         {
-            return new StoredProcedureParameter()
+            return new SqlSugarSqlSugarStoredProcedureParameter()
             {
                 ParameterName = name,
                 Value = value,
@@ -138,9 +138,9 @@ namespace Base.Util.Repository.SqlSugarCore.Models
         /// <param name="name">参数名</param>
         /// <param name="value">参数值</param>
         /// <returns></returns>
-        public static StoredProcedureParameter CreateInputOutput(string name, object value)
+        public static SqlSugarSqlSugarStoredProcedureParameter CreateInputOutput(string name, object value)
         {
-            return new StoredProcedureParameter()
+            return new SqlSugarSqlSugarStoredProcedureParameter()
             {
                 ParameterName = name,
                 Value = value,
