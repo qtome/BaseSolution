@@ -814,6 +814,18 @@
             Api路由
             </summary>
         </member>
+        <member name="T:Base.Util.Common.Models.WebApi.ServiceErrorTraceModelExtension">
+            <summary>
+            服务错误追踪类 扩展
+            </summary>
+        </member>
+        <member name="M:Base.Util.Common.Models.WebApi.ServiceErrorTraceModelExtension.GetViewModel(Base.Util.Common.Models.WebApi.ServiceErrorTraceModel)">
+            <summary>
+            获取前端错误码追踪信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
         <member name="T:Base.Util.Common.Models.WebApi.ServiceException">
             <summary>
             API 异常
@@ -4391,6 +4403,13 @@
             <returns></returns>
         </member>
         <member name="M:Base.Util.Common.Utils.Reflection.ReflectHelper.GetMethodBy(System.Int32)">
+            <summary>
+            获取之前步骤方法信息
+            </summary>
+            <param name="index">第几个步骤前</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Common.Utils.Reflection.ReflectHelper.GetMethodByFrame(System.Int32)">
             <summary>
             获取之前步骤方法信息
             </summary>

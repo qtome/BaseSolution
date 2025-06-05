@@ -65,6 +65,100 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
+        <member name="T:Base.Util.Redis.RedisConst">
+            <summary>
+            Redis静态变量
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.RedisConfig">
+            <summary>
+            Redis配置类
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.SystemErrorRedisDbNum">
+            <summary>
+            系统错误记录信息使用redisDb(不可删除)
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.SystemErrorRedisKey">
+            <summary>
+            系统错误记录信息使用Key
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.FilterLoggerRedisKey">
+            <summary>
+            过滤器使用记录日志
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.PermissionRedisDbNum">
+            <summary>
+            权限数据缓存使用redisDb(不可删除)
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.PermissionRedisKey">
+            <summary>
+            权限数据缓存使用Key
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.DBTransactionDbNum">
+            <summary>
+            数据验证，提交验证，事务完整相关的功能缓存使用redisDb(不可删除)
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.DBTransactionRedisKey">
+            <summary>
+            数据库事务缓存使用Key
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.BaseServerCacheRedisDbNum">
+            <summary>
+            第三方服务缓存使用redisDb
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.BusinessCacheRedisDbNum">
+            <summary>
+            服务缓存使用redisDb
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.CommonRedisDbNum">
+            <summary>
+            通用业务使用redisDb(下拉框选项相关)
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.CommonCacheRedisKey">
+            <summary>
+            通用业务缓存使用Key
+            </summary>
+        </member>
+        <member name="T:Base.Util.Redis.RedisExtension">
+            <summary>
+             Redis扩展类
+            </summary>
+        </member>
+        <member name="M:Base.Util.Redis.RedisExtension.InsertSystemErrorLog(Base.Util.Redis.RedisManager,System.Object)">
+            <summary>
+            插入系统错误日志
+            </summary>
+            <param name="redis"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisExtension.InsertLog(Base.Util.Redis.RedisManager,System.Object,System.String)">
+            <summary>
+            插入日志
+            </summary>
+            <param name="redis"></param>
+            <param name="item"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:Base.Util.Redis.RedisExtension.GetLogList``1(Base.Util.Redis.RedisManager,System.Nullable{System.DateTime},System.String)">
+            <summary>
+            获取日志列表
+            </summary>
+            <param name="redis"></param>
+            <param name="date"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
         <member name="T:Base.Util.Redis.RedisManager">
             <summary>
             缓存管理

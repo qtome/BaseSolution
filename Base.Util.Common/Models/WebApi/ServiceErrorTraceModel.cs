@@ -63,4 +63,24 @@ namespace Base.Util.Common.Models.WebApi
         public IDictionary<string, object?> RouteValues { get; set; }
 
     }
+
+    /// <summary>
+    /// 服务错误追踪类 扩展
+    /// </summary>
+    public static class ServiceErrorTraceModelExtension
+    {
+        /// <summary>
+        /// 获取前端错误码追踪信息
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public static object GetViewModel(this ServiceErrorTraceModel model)
+        {
+            return new
+            {
+                TraceId = model.TraceId,
+                Code = model.Code,
+            };
+        }
+    }
 }

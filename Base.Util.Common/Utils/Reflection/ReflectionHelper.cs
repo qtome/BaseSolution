@@ -140,6 +140,40 @@ namespace Base.Util.Common.Utils.Reflection
         }
 
         /// <summary>
+        /// 获取之前步骤方法信息
+        /// </summary>
+        /// <param name="index">第几个步骤前</param>
+        /// <returns></returns>
+        public static MethodBase GetMethodByFrame(int index = 1)
+        {
+            try
+            {
+                MethodBase methodBy = ReflectHelper.GetMethodBy(index);
+                if (methodBy.Name.Contains("Start") && index >= 1)
+                {
+                    methodBy = ReflectHelper.GetMethodBy(index - 1);
+                }
+
+                if (methodBy.Name.Contains("MoveNext"))
+                {
+                    Regex regex = new Regex("<(\\w+)>.*");
+                    var methodName = regex.Match(methodBy.DeclaringType.Name).Groups[1].Value;
+                    for (int indexAdd = 1; indexAdd <= 5; indexAdd++)
+                    {
+                        if (methodName == methodBy.Name) break;
+                        methodBy = ReflectHelper.GetMethodBy(index + indexAdd);
+                    }
+                }
+
+                return methodBy;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// 步骤方法名
         /// </summary>
         /// <param name="index">第几个步骤前</param>
