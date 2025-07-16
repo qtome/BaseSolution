@@ -126,12 +126,12 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <param name="d"></param>
         /// <param name="s"></param>
         /// <returns></returns>
-        public static double ToFixed(this double d, int s)
+        public static decimal ToFixed(this double d, int s)
         {
             double sp = Math.Pow(10, s);
             double fix = Math.Truncate(d) + Math.Floor((d - Math.Truncate(d)) * sp) / sp;
             string format = "0." + string.Empty.PadEnd(s, "0");
-            double result = Convert.ToDouble(fix.ToString(format));
+            decimal result = Convert.ToDecimal(fix.ToString(format));
             return result;
         }
 
@@ -141,57 +141,38 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <param name="d"></param>
         /// <param name="s"></param>
         /// <returns></returns>
-        public static double? ToFixed(this double? d, int s)
+        public static decimal? ToFixed(this double? d, int s)
         {
-            if (!d.HasValue) return d;
+            if (!d.HasValue) return null;
             return d.Value.ToFixed(s);
         }
 
         /// <summary>
-        /// 计算百分比
+        ///  截取指定位数
         /// </summary>
-        /// <param name="numerator">分子</param>
-        /// <param name="denominator">分母</param>
-        /// <param name="s">小数点保留位数</param>
+        /// <param name="d"></param>
+        /// <param name="s"></param>
         /// <returns></returns>
-        public static double GetPrecent(double numerator, double denominator, int s = 2)
+        public static decimal ToFixed(this float d, int s)
         {
-            // 分母 不能为 0
-            if ((int)denominator == 0) return 0;
-            double precent = Math.Round((double)numerator / (double)denominator * 100, s);
-            return precent.ToFixed(s);
+            double sp = Math.Pow(10, s);
+            double fix = Math.Truncate(d) + Math.Floor((d - Math.Truncate(d)) * sp) / sp;
+            string format = "0." + string.Empty.PadEnd(s, "0");
+            decimal result = Convert.ToDecimal(fix.ToString(format));
+            return result;
         }
 
         /// <summary>
-        /// 计算百分比
+        ///  截取指定位数
         /// </summary>
-        /// <param name="numerator">分子</param>
-        /// <param name="denominator">分母</param>
-        /// <param name="s">小数点保留位数</param>
+        /// <param name="d"></param>
+        /// <param name="s"></param>
         /// <returns></returns>
-        public static double GetPrecent(int numerator, int denominator, int s = 2)
+        public static decimal? ToFixed(this float? d, int s)
         {
-            // 分母 不能为 0
-            if (denominator == 0) return 0;
-            double precent = Math.Round(numerator / (double)denominator * 100, s);
-            return precent;
+            if (!d.HasValue) return null;
+            return d.Value.ToFixed(s);
         }
-
-        /// <summary>
-        /// 计算百分比
-        /// </summary>
-        /// <param name="numerator">分子</param>
-        /// <param name="denominator">分母</param>
-        /// <param name="s">小数点保留位数</param>
-        /// <returns></returns>
-        public static double GetPrecent(float numerator, float denominator, int s = 2)
-        {
-            // 分母 不能为 0
-            if ((int)denominator == 0) return 0;
-            double precent = Math.Round((double)numerator / (double)denominator * 100, s);
-            return precent;
-        }
-
 
         /// <summary>
         /// 计算百分比
@@ -204,8 +185,8 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         {
             // 分母 不能为 0
             if ((int)denominator == 0) return 0;
-            decimal precent = Math.Round(numerator / denominator * 100, s);
-            return precent.ToFixed(s);
+            decimal percent = Math.Round((decimal)numerator / (decimal)denominator * 100, s);
+            return percent.ToFixed(s);
         }
 
         /// <summary>
@@ -219,23 +200,8 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         {
             // 分母 不能为 0
             if ((int)denominator == 0) return 0;
-            decimal precent = Math.Round((decimal)numerator / (decimal)denominator * 100, s);
-            return precent.ToFixed(s);
-        }
-
-        /// <summary>
-        /// 计算百分比
-        /// </summary>
-        /// <param name="numerator">分子</param>
-        /// <param name="denominator">分母</param>
-        /// <param name="s">小数点保留位数</param>
-        /// <returns></returns>
-        public static decimal GetPercent(int numerator, int denominator, int s = 2)
-        {
-            // 分母 不能为 0
-            if (denominator == 0) return 0;
-            decimal precent = Math.Round(numerator / (decimal)denominator * 100, s);
-            return precent;
+            decimal percent = Math.Round((decimal)numerator / (decimal)denominator * 100, s);
+            return percent.ToFixed(s);
         }
 
         /// <summary>
@@ -249,8 +215,71 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         {
             // 分母 不能为 0
             if ((int)denominator == 0) return 0;
-            decimal precent = Math.Round((decimal)numerator / (decimal)denominator * 100, s);
-            return precent;
+            decimal percent = Math.Round((decimal)numerator / (decimal)denominator * 100, s);
+            return percent;
+        }
+
+        /// <summary>
+        /// 计算百分比
+        /// </summary>
+        /// <param name="numerator">分子</param>
+        /// <param name="denominator">分母</param>
+        /// <param name="s">小数点保留位数</param>
+        /// <returns></returns>
+        public static decimal GetPercent(int numerator, int denominator, int s = 2)
+        {
+            // 分母 不能为 0
+            if (denominator == 0) return 0;
+            decimal percent = Math.Round(numerator / (decimal)denominator * 100, s);
+            return percent;
+        }
+
+        /// <summary>
+        /// 计算平均值
+        /// </summary>
+        /// <param name="numerator">分子</param>
+        /// <param name="denominator">分母</param>
+        /// <param name="s">小数点保留位数</param>
+        /// <returns></returns>
+        public static decimal GetAverage(decimal numerator, decimal denominator, int s = 2)
+        {
+            return (decimal)(GetPercent(numerator, denominator, s + 2) / 100).ToFixed(s);
+        }
+
+        /// <summary>
+        /// 计算平均值
+        /// </summary>
+        /// <param name="numerator">分子</param>
+        /// <param name="denominator">分母</param>
+        /// <param name="s">小数点保留位数</param>
+        /// <returns></returns>
+        public static decimal GetAverage(double numerator, double denominator, int s = 2)
+        {
+            return (GetPercent(numerator, denominator, s + 2) / 100).ToFixed(s);
+        }
+
+        /// <summary>
+        /// 计算平均值
+        /// </summary>
+        /// <param name="numerator">分子</param>
+        /// <param name="denominator">分母</param>
+        /// <param name="s">小数点保留位数</param>
+        /// <returns></returns>
+        public static decimal GetAverage(int numerator, int denominator, int s = 2)
+        {
+            return (GetPercent(numerator, denominator, s + 2) / 100).ToFixed(s);
+        }
+
+        /// <summary>
+        /// 计算平均值
+        /// </summary>
+        /// <param name="numerator">分子</param>
+        /// <param name="denominator">分母</param>
+        /// <param name="s">小数点保留位数</param>
+        /// <returns></returns>
+        public static decimal GetAverage(float numerator, float denominator, int s = 2)
+        {
+            return (GetPercent(numerator, denominator, s + 2) / 100).ToFixed(s);
         }
 
         #endregion

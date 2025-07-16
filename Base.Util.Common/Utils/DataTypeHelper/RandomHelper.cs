@@ -129,9 +129,9 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// </summary>
         /// <param name="s">小数保留位数</param>
         /// <returns>随机数</returns>
-        public double GetRandomDouble(int s = 5)
+        public decimal GetRandomDecimal(int s = 5)
         {
-            return GetRandomDouble(Minimum, Maximal, s);
+            return GetRandomDecimal(Minimum, Maximal, s);
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <param name="maxNumber">最大值</param>
         /// <param name="s">小数保留位数</param>
         /// <returns>随机数</returns>
-        public double GetRandomDouble(int minNumber, int maxNumber, int s = 5)
+        public decimal GetRandomDecimal(int minNumber, int maxNumber, int s = 5)
         {
             if (maxNumber - 1 < minNumber) maxNumber = minNumber + 1;
             return Random.Next(minNumber, maxNumber - 1) + Random.NextDouble().ToFixed(s);

@@ -4,7 +4,7 @@
         <name>Base.AuthorityApi</name>
     </assembly>
     <members>
-        <member name="T:Base.AuthorityApi.Controller.BaseAuthorityController">
+        <member name="T:Base.AuthorityApi.Controller.Base.BaseAuthorityController">
             <summary>
             权限基类控制器
             </summary>

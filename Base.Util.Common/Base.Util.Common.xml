@@ -85,6 +85,53 @@
             <param name="exception">抛出的异常</param>
             <returns></returns>
         </member>
+        <member name="T:Base.Util.Common.BaseClass.Attributes.DataSourceAttribute">
+            <summary>
+            数据来源属性
+            </summary>
+        </member>
+        <member name="M:Base.Util.Common.BaseClass.Attributes.DataSourceAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dataSource">数据来源</param>
+        </member>
+        <member name="M:Base.Util.Common.BaseClass.Attributes.DataSourceAttribute.GetDataSource">
+            <summary>
+            获取数据来源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Base.Util.Common.Enums.Common.DataSourceOption">
+            <summary>
+            数据来源枚举
+            </summary>
+        </member>
+        <member name="F:Base.Util.Common.Enums.Common.DataSourceOption.未知">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Base.Util.Common.Enums.Common.DataSourceOption.微信小程序提交">
+            <summary>
+            微信小程序提交
+            </summary>
+        </member>
+        <member name="F:Base.Util.Common.Enums.Common.DataSourceOption.PC提交">
+            <summary>
+            PC提交
+            </summary>
+        </member>
+        <member name="F:Base.Util.Common.Enums.Common.DataSourceOption.PC导入">
+            <summary>
+            PC导入
+            </summary>
+        </member>
+        <member name="F:Base.Util.Common.Enums.Common.DataSourceOption.第三方接入">
+            <summary>
+            第三方接入
+            </summary>
+        </member>
         <member name="T:Base.Util.Common.Extensions.Linq.LinqEnumerablExtension">
             <summary>
             LINQ动态排序扩展#
@@ -1121,6 +1168,36 @@
             20000-29999 操作级错误   一般
             30000-39999 功能级错误   严重
             40000-49999 系统级错误   致命
+            </summary>
+        </member>
+        <member name="T:Base.Util.Common.Statics.ApiInfo.ApiGrouping">
+            <summary>
+            Api 版本分组
+            </summary>
+        </member>
+        <member name="F:Base.Util.Common.Statics.ApiInfo.ApiGrouping.Version_0">
+            <summary>
+            测试版本
+            </summary>
+        </member>
+        <member name="F:Base.Util.Common.Statics.ApiInfo.ApiGrouping.Version_P">
+            <summary>
+            内部交互 通用（不对外开放）
+            </summary>
+        </member>
+        <member name="F:Base.Util.Common.Statics.ApiInfo.ApiGrouping.Version_1">
+            <summary>
+            1.0 版本
+            </summary>
+        </member>
+        <member name="F:Base.Util.Common.Statics.ApiInfo.ApiGrouping.Version_2">
+            <summary>
+            2.0 版本
+            </summary>
+        </member>
+        <member name="F:Base.Util.Common.Statics.ApiInfo.ApiGrouping.Version_3">
+            <summary>
+            3.0 版本
             </summary>
         </member>
         <member name="T:Base.Util.Common.Utils.CollectionHelper.ArrayHelper">
@@ -2793,27 +2870,36 @@
             <param name="d"></param>
             <returns></returns>
         </member>
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRangeTuple(System.DateTime,Base.Util.Common.Utils.DataTypeHelper.DateFrequency)">
+            <summary>
+            根据不同周期计算出起始日期和结束日期
+            </summary>
+            <param name="date"></param>
+            <param name="judgeFrequency"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRangeTuple(System.Nullable{System.DateTime},Base.Util.Common.Utils.DataTypeHelper.DateFrequency)">
+            <summary>
+            计算出起始日期和结束日期
+            </summary>
+            <param name="date"></param>
+            <param name="judgeFrequency"></param>
+            <returns></returns>
+        </member>
         <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRange(System.DateTime,Base.Util.Common.Utils.DataTypeHelper.DateFrequency)">
             <summary>
             根据不同周期计算出起始日期和结束日期
             </summary>
+            <param name="date"></param>
             <param name="judgeFrequency"></param>
-            <returns>起始时间，结束时间</returns>
+            <returns></returns>
         </member>
         <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRange(System.Nullable{System.DateTime},Base.Util.Common.Utils.DataTypeHelper.DateFrequency)">
             <summary>
-            根据不同周期计算出起始日期和结束日期
+            计算出起始日期和结束日期
             </summary>
+            <param name="date"></param>
             <param name="judgeFrequency"></param>
-            <returns>起始时间，结束时间</returns>
-        </member>
-        <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRange(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">
-            <summary>
-            根据不同周期计算出起始日期和结束日期
-            </summary>
-            <param name="year"></param>
-            <param name="season"></param>
-            <param name="month"></param>
             <returns></returns>
         </member>
         <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRange(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32})">
@@ -2826,7 +2912,7 @@
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRangeArray(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRange(System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
             根据年月计算出起始日期和结束日期
             </summary>
@@ -2834,29 +2920,25 @@
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRangeArray(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRange(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
             计算出起始日期和结束日期
             </summary>
             <param name="startDate"></param>
             <param name="endDate"></param>
             <param name="year"></param>
+            <param name="season"></param>
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRangeArray(System.DateTime,Base.Util.Common.Utils.DataTypeHelper.DateFrequency)">
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRange(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
             根据不同周期计算出起始日期和结束日期
             </summary>
-            <param name="judgeFrequency"></param>
-            <returns>起始时间，结束时间</returns>
-        </member>
-        <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.GetDateRangeArray(System.Nullable{System.DateTime},Base.Util.Common.Utils.DataTypeHelper.DateFrequency)">
-            <summary>
-            根据不同周期计算出起始日期和结束日期
-            </summary>
-            <param name="judgeFrequency"></param>
-            <returns>起始时间，结束时间</returns>
+            <param name="year"></param>
+            <param name="season"></param>
+            <param name="month"></param>
+            <returns></returns>
         </member>
         <member name="M:Base.Util.Common.Utils.DataTypeHelper.DateTimeHelper.CalculateDateRange(System.Nullable{System.DateTime},Base.Util.Common.Utils.DataTypeHelper.DateFrequency)">
             <summary>
@@ -3081,31 +3163,20 @@
             <param name="s"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.GetPrecent(System.Double,System.Double,System.Int32)">
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.ToFixed(System.Single,System.Int32)">
             <summary>
-            计算百分比
+             截取指定位数
             </summary>
-            <param name="numerator">分子</param>
-            <param name="denominator">分母</param>
-            <param name="s">小数点保留位数</param>
+            <param name="d"></param>
+            <param name="s"></param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.GetPrecent(System.Int32,System.Int32,System.Int32)">
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.ToFixed(System.Nullable{System.Single},System.Int32)">
             <summary>
-            计算百分比
+             截取指定位数
             </summary>
-            <param name="numerator">分子</param>
-            <param name="denominator">分母</param>
-            <param name="s">小数点保留位数</param>
-            <returns></returns>
-        </member>
-        <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.GetPrecent(System.Single,System.Single,System.Int32)">
-            <summary>
-            计算百分比
-            </summary>
-            <param name="numerator">分子</param>
-            <param name="denominator">分母</param>
-            <param name="s">小数点保留位数</param>
+            <param name="d"></param>
+            <param name="s"></param>
             <returns></returns>
         </member>
         <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.GetPercent(System.Decimal,System.Decimal,System.Int32)">
@@ -3126,6 +3197,15 @@
             <param name="s">小数点保留位数</param>
             <returns></returns>
         </member>
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.GetPercent(System.Single,System.Single,System.Int32)">
+            <summary>
+            计算百分比
+            </summary>
+            <param name="numerator">分子</param>
+            <param name="denominator">分母</param>
+            <param name="s">小数点保留位数</param>
+            <returns></returns>
+        </member>
         <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.GetPercent(System.Int32,System.Int32,System.Int32)">
             <summary>
             计算百分比
@@ -3135,9 +3215,36 @@
             <param name="s">小数点保留位数</param>
             <returns></returns>
         </member>
-        <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.GetPercent(System.Single,System.Single,System.Int32)">
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.GetAverage(System.Decimal,System.Decimal,System.Int32)">
             <summary>
-            计算百分比
+            计算平均值
+            </summary>
+            <param name="numerator">分子</param>
+            <param name="denominator">分母</param>
+            <param name="s">小数点保留位数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.GetAverage(System.Double,System.Double,System.Int32)">
+            <summary>
+            计算平均值
+            </summary>
+            <param name="numerator">分子</param>
+            <param name="denominator">分母</param>
+            <param name="s">小数点保留位数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.GetAverage(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            计算平均值
+            </summary>
+            <param name="numerator">分子</param>
+            <param name="denominator">分母</param>
+            <param name="s">小数点保留位数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.NumberHelper.GetAverage(System.Single,System.Single,System.Int32)">
+            <summary>
+            计算平均值
             </summary>
             <param name="numerator">分子</param>
             <param name="denominator">分母</param>
@@ -3291,14 +3398,14 @@
             <param name="maxNumber">最大值</param>
             <returns>随机数</returns>
         </member>
-        <member name="M:Base.Util.Common.Utils.DataTypeHelper.RandomHelper.GetRandomDouble(System.Int32)">
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.RandomHelper.GetRandomDecimal(System.Int32)">
             <summary>
             产生随机数
             </summary>
             <param name="s">小数保留位数</param>
             <returns>随机数</returns>
         </member>
-        <member name="M:Base.Util.Common.Utils.DataTypeHelper.RandomHelper.GetRandomDouble(System.Int32,System.Int32,System.Int32)">
+        <member name="M:Base.Util.Common.Utils.DataTypeHelper.RandomHelper.GetRandomDecimal(System.Int32,System.Int32,System.Int32)">
             <summary>
             产生随机数
             </summary>

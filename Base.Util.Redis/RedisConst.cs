@@ -5,11 +5,6 @@
     /// </summary>
     public class RedisConst
     {
-        /// <summary>
-        /// Redis配置类
-        /// </summary>
-        public static RedisConfig RedisConfig = null;
-
         #region 数据事务相关
 
         /// <summary>

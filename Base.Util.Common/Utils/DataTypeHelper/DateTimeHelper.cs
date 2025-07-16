@@ -503,9 +503,10 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <summary>
         /// 根据不同周期计算出起始日期和结束日期
         /// </summary>
+        /// <param name="date"></param>
         /// <param name="judgeFrequency"></param>
-        /// <returns>起始时间，结束时间</returns>
-        public static Tuple<DateTime?, DateTime?> GetDateRange(this DateTime date, DateFrequency judgeFrequency)
+        /// <returns></returns>
+        public static Tuple<DateTime?, DateTime?> GetDateRangeTuple(this DateTime date, DateFrequency judgeFrequency)
         {
             try
             {
@@ -519,11 +520,12 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         }
 
         /// <summary>
-        /// 根据不同周期计算出起始日期和结束日期
+        /// 计算出起始日期和结束日期
         /// </summary>
+        /// <param name="date"></param>
         /// <param name="judgeFrequency"></param>
-        /// <returns>起始时间，结束时间</returns>
-        public static Tuple<DateTime?, DateTime?> GetDateRange(this DateTime? date, DateFrequency judgeFrequency)
+        /// <returns></returns>
+        public static Tuple<DateTime?, DateTime?> GetDateRangeTuple(this DateTime? date, DateFrequency judgeFrequency)
         {
             try
             {
@@ -539,29 +541,33 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <summary>
         /// 根据不同周期计算出起始日期和结束日期
         /// </summary>
-        /// <param name="year"></param>
-        /// <param name="season"></param>
-        /// <param name="month"></param>
+        /// <param name="date"></param>
+        /// <param name="judgeFrequency"></param>
         /// <returns></returns>
-        public static (DateTime?, DateTime?) GetDateRange(int? year, int? season, int? month)
+        public static (DateTime?, DateTime?) GetDateRange(this DateTime date, DateFrequency judgeFrequency)
         {
-            if (!year.HasValue) return (null, null);
             try
             {
-                DateFrequency judgeFrequency = DateFrequency.年;
-                int inMonth = 1;
-                if (season.HasValue)
-                {
-                    judgeFrequency = DateFrequency.季;
-                    inMonth = season.Value * 3;
-                }
-                if (month.HasValue)
-                {
-                    judgeFrequency = DateFrequency.月;
-                    inMonth = month.Value;
-                }
-                DateTime date = new DateTime(year.Value, inMonth, 1);
                 (DateTime? startDate, DateTime? endDate) = CalculateDateRange(date, judgeFrequency);
+                return (startDate, endDate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// 计算出起始日期和结束日期
+        /// </summary>
+        /// <param name="date"></param>
+        /// <param name="judgeFrequency"></param>
+        /// <returns></returns>
+        public static (DateTime?, DateTime?) GetDateRange(this DateTime? date, DateFrequency judgeFrequency)
+        {
+            try
+            {
+                (DateTime? startDate, DateTime? endDate) = date.CalculateDateRange(judgeFrequency);
                 return (startDate, endDate);
             }
             catch (Exception ex)
@@ -602,22 +608,12 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <param name="year"></param>
         /// <param name="month"></param>
         /// <returns></returns>
-        public static (DateTime?, DateTime?) GetDateRangeArray(
-            int? year
-            , int? month)
+        public static (DateTime?, DateTime?) GetDateRange(int? year, int? month)
         {
             if (!year.HasValue) return (null, null);
             try
             {
-                DateTime date = new DateTime(year.Value, 1, 1);
-                DateFrequency judgeFrequency = DateFrequency.年;
-                if (month.HasValue)
-                {
-                    date = new DateTime(year.Value, month.Value, 1);
-                    judgeFrequency = DateFrequency.月;
-                }
-                (DateTime? startDate, DateTime? endDate) = CalculateDateRange(date, judgeFrequency);
-                return (startDate, endDate);
+                return GetDateRange(year, null, month);
             }
             catch (Exception ex)
             {
@@ -631,18 +627,18 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="year"></param>
+        /// <param name="season"></param>
         /// <param name="month"></param>
         /// <returns></returns>
-        public static (DateTime?, DateTime?) GetDateRangeArray(
+        public static (DateTime?, DateTime?) GetDateRange(
             DateTime? startDate, DateTime? endDate
-            , int? year, int? month)
+            , int? year, int? season, int? month)
         {
-
             try
             {
                 if (!startDate.HasValue && !endDate.HasValue)
                 {
-                    (startDate, endDate) = GetDateRangeArray(year, month);
+                    (startDate, endDate) = GetDateRange(year, season, month);
                 }
                 return (startDate, endDate);
             }
@@ -655,31 +651,29 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <summary>
         /// 根据不同周期计算出起始日期和结束日期
         /// </summary>
-        /// <param name="judgeFrequency"></param>
-        /// <returns>起始时间，结束时间</returns>
-        public static (DateTime?, DateTime?) GetDateRangeArray(this DateTime date, DateFrequency judgeFrequency)
+        /// <param name="year"></param>
+        /// <param name="season"></param>
+        /// <param name="month"></param>
+        /// <returns></returns>
+        public static (DateTime?, DateTime?) GetDateRange(int? year, int? season, int? month)
         {
+            if (!year.HasValue) return (null, null);
             try
             {
+                DateFrequency judgeFrequency = DateFrequency.年;
+                int inMonth = 1;
+                if (season.HasValue)
+                {
+                    judgeFrequency = DateFrequency.季;
+                    inMonth = season.Value * 3;
+                }
+                if (month.HasValue)
+                {
+                    judgeFrequency = DateFrequency.月;
+                    inMonth = month.Value;
+                }
+                DateTime date = new DateTime(year.Value, inMonth, 1);
                 (DateTime? startDate, DateTime? endDate) = CalculateDateRange(date, judgeFrequency);
-                return (startDate, endDate);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// 根据不同周期计算出起始日期和结束日期
-        /// </summary>
-        /// <param name="judgeFrequency"></param>
-        /// <returns>起始时间，结束时间</returns>
-        public static (DateTime?, DateTime?) GetDateRangeArray(this DateTime? date, DateFrequency judgeFrequency)
-        {
-            try
-            {
-                (DateTime? startDate, DateTime? endDate) = date.CalculateDateRange(judgeFrequency);
                 return (startDate, endDate);
             }
             catch (Exception ex)

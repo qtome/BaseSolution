@@ -1,0 +1,632 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Base.Util.Core.Base</name>
+    </assembly>
+    <members>
+        <member name="T:Base.Util.Core.Base.Cores.ConfigureOptionCore">
+            <summary>
+            常用配置项 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.ConfigureOptionCore.AddConfigureOptionCore``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{``0})">
+            <summary>
+            常用配置项 注入
+            </summary>
+            <typeparam name="TOptions"></typeparam>
+            <param name="services"></param>
+            <param name="configureOptions"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.ConfigureOptionCore.AddConfigureOptionCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,Base.Util.Core.Base.Models.Options.ConfigureCoreOptions)">
+            <summary>
+            常用配置项 注入
+            </summary>
+            <param name="services"></param>
+            <param name="options"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Base.Util.Core.Base.Cores.CorsCore">
+            <summary>
+            跨域配置 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.CorsCore.AddCorsCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.AspNetCore.Cors.Infrastructure.CorsOptions})">
+            <summary>
+            跨域配置 注入
+            </summary>
+            <param name="services"></param>
+            <param name="setupAction"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.CorsCore.AddCorsCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,Base.Util.Core.Base.Models.Options.CorsCoreOptions)">
+            <summary>
+            跨域配置 注入
+            </summary>
+            <param name="services"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.CorsCore.UseCorsCore(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{Microsoft.AspNetCore.Cors.Infrastructure.CorsPolicyBuilder})">
+            <summary>
+            跨域配置 中间件
+            </summary>
+            <param name="app"></param>
+            <param name="configurePolicy"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.CorsCore.UseCorsCore(Microsoft.AspNetCore.Builder.IApplicationBuilder,Base.Util.Core.Base.Models.Options.CorsCoreOptions)">
+            <summary>
+            跨域配置 中间件
+            </summary>
+            <param name="app"></param>
+            <param name="options"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Base.Util.Core.Base.Cores.HealthCore">
+            <summary>
+            健康检查 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.HealthCore.AddHealthCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            健康检查 注入
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.HealthCore.UseHealthCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            健康检查 中间件
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.HealthCore.UseHealthCore(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder})">
+            <summary>
+            健康检查 中间件
+            </summary>
+            <param name="app"></param>
+            <param name="configure"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Base.Util.Core.Base.Cores.MvcCore">
+            <summary>
+            MVC 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.MvcCore.AddMvcCustomCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,Base.Util.Core.Base.Models.Options.MvcCoreOptions)">
+            <summary>
+            MVC 服务注入
+            </summary>
+            <param name="services"></param>
+            <param name="options"></param>
+        </member>
+        <member name="T:Base.Util.Core.Base.Cores.RedisCore">
+            <summary>
+            Redis注入
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.RedisCore.AddRedisCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,Base.Util.Core.Base.Models.Options.RedisCoreOptions)">
+            <summary>
+            Redis 注入
+            </summary>
+            <param name="services"></param>
+            <param name="options"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Base.Util.Core.Base.Cores.RouteEndpointCore">
+            <summary>
+            路由 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.RouteEndpointCore.AddRouteEndpointCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            路由 服务注入
+            </summary>
+            <param name="services">服务注入集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.RouteEndpointCore.AddRouteEndpointCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.AspNetCore.Routing.RouteOptions})">
+            <summary>
+            路由 服务注入
+            </summary>
+            <param name="services"></param>
+            <param name="configureOptions"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.RouteEndpointCore.UseRouteEndpointCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            路由 中间件
+            </summary>
+            <param name="app">应用程序构造器</param>
+            <returns></returns>
+        </member>
+        <member name="T:Base.Util.Core.Base.Cores.SessionCore">
+            <summary>
+            Session 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.SessionCore.AddCommonSessionCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,Base.Util.Core.Base.Models.Options.SessionCoreOptions)">
+            <summary>
+            Session 服务注入(通用配置)
+            </summary>
+            <param name="services"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.SessionCore.UseCommonSessionCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Session 中间件
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Base.Util.Core.Base.Cores.SwaggerCore">
+            <summary>
+            Swagger 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.SwaggerCore.AddSwaggerCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,Base.Util.Core.Base.Models.Options.SwaggerCoreOptions)">
+            <summary>
+            Swagger 服务注入
+            </summary>
+            <param name="services"></param>
+            <param name="options"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Base.Util.Core.Base.Cores.SwaggerCore.UseSwaggerCore(Microsoft.AspNetCore.Builder.IApplicationBuilder,Base.Util.Core.Base.Models.Options.SwaggerCoreOptions)">
+            <summary>
+            Swagger 中间件
+            </summary>
+            <param name="app"></param>
+            <param name="options"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Base.Util.Core.Base.Extensions.HttpContextExtension">
+            <summary>
+            .NetCore中HttpContext扩展
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.IsWebSocketRequest(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            判断是否是 WebSocket 请求
+            </summary>
+            <param name="context">http请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetLocalIpAddressToIPv4(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取本机 IPv4地址
+            </summary>
+            <param name="context">http请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetLocalIpAddressToIPv6(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取本机 IPv6地址
+            </summary>
+            <param name="context">http请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetRemoteIpAddressToIPv4(Microsoft.AspNetCore.Http.HttpContext,System.String[])">
+            <summary>
+            获取远程 IPv4地址
+            </summary>
+            <param name="context">http请求上下文</param>
+            <param name="headerKeys">是否优先取值的头信息键值集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetRemoteIpAddressToIPv6(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取远程 IPv6地址
+            </summary>
+            <param name="context">http请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetRequestHeaderInfos(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取所有头信息
+            </summary>
+            <param name="context">http请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetRequestHeaderInfo(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            获取指定请求头信息
+            </summary>
+            <param name="context">http请求上下文</param>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.AddRequestHeaderInfo(Microsoft.AspNetCore.Http.HttpContext,System.String,System.String)">
+            <summary>
+            设置请求头信息
+            </summary>
+            <param name="context">http请求上下文</param>
+            <param name="key">关键字</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetRequestUrlAddress(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取完整请求地址
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetRefererUrlAddress(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            获取来源地址
+            </summary>
+            <param name="context">http请求上下文</param>
+            <param name="refererHeaderKey">请求头信息来源键值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetResponseHeaderInfos(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取所有响应头信息
+            </summary>
+            <param name="context">http请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetResponseHeaderInfo(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            获取指定响应头信息
+            </summary>
+            <param name="context">http请求上下文</param>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.AddResponseHeaderInfo(Microsoft.AspNetCore.Http.HttpContext,System.String,System.String)">
+            <summary>
+            设置响应头信息
+            </summary>
+            <param name="context">http请求上下文</param>
+            <param name="key">关键字</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.RemoveSession(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            清除所有Session
+            </summary>
+            <param name="context">http请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.RemoveSession(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            清除指定Session
+            </summary>
+            <param name="context">http请求上下文</param>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.SetSession(Microsoft.AspNetCore.Http.HttpContext,System.String,System.Object)">
+            <summary>
+            存储指定Session
+            </summary>
+            <param name="context">http请求上下文</param>
+            <param name="key">关键字</param>
+            <param name="value">对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.SetSession(Microsoft.AspNetCore.Http.HttpContext,System.String,System.String)">
+            <summary>
+            存储指定Session
+            </summary>
+            <param name="context">http请求上下文</param>
+            <param name="key">关键字</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetSession``1(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            获取指定Session
+            </summary>
+            <param name="context">http请求上下文</param>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetSession(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            获取指定Session
+            </summary>
+            <param name="context">http请求上下文</param>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetRequestHeaderInfos(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            获取所有请求头信息
+            </summary>
+            <param name="request">接口请求</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetRequestHeaderInfo(Microsoft.AspNetCore.Http.HttpRequest,System.String)">
+            <summary>
+            获取指定请求头信息
+            </summary>
+            <param name="request">接口请求</param>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.AddRequestHeaderInfo(Microsoft.AspNetCore.Http.HttpRequest,System.String,System.String)">
+            <summary>
+            设置请求头信息
+            </summary>
+            <param name="request">接口请求</param>
+            <param name="key">关键字</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetRequestUrlAddress(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            获取完整请求地址
+            </summary>
+            <param name="request">接口请求</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetRefererUrlAddress(Microsoft.AspNetCore.Http.HttpRequest,System.String)">
+            <summary>
+            获取来源地址
+            </summary>
+            <param name="request">接口请求</param>
+            <param name="refererHeaderKey">请求头信息来源键值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetResponseHeaderInfos(Microsoft.AspNetCore.Http.HttpResponse)">
+            <summary>
+            获取所有响应头信息
+            </summary>
+            <param name="response">接口响应</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.GetResponseHeaderInfo(Microsoft.AspNetCore.Http.HttpResponse,System.String)">
+            <summary>
+            获取指定响应头信息
+            </summary>
+            <param name="response">接口响应</param>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Extensions.HttpContextExtension.AddResponseHeaderInfo(Microsoft.AspNetCore.Http.HttpResponse,System.String,System.String)">
+            <summary>
+            设置响应头信息
+            </summary>
+            <param name="response">接口响应</param>
+            <param name="key">关键字</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="T:Base.Util.Core.Base.Models.Options.ConfigureCoreOptions">
+            <summary>
+            常用配置项
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.ConfigureCoreOptions.FormOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.ConfigureCoreOptions.ForwardedHeadersOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.ConfigureCoreOptions.CookiePolicyOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Models.Options.ConfigureCoreOptions.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:Base.Util.Core.Base.Models.Options.CorsCoreOptions">
+            <summary>
+            跨域注入配置
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.CorsCoreOptions.EnableAllIPs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.CorsCoreOptions.PolicyName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.CorsCoreOptions.IPs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Models.Options.CorsCoreOptions.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:Base.Util.Core.Base.Models.Options.MvcCoreOptions">
+            <summary>
+            Mvc注入配置项
+            </summary>
+        </member>
+        <member name="F:Base.Util.Core.Base.Models.Options.MvcCoreOptions.GlobalFliters">
+            <summary>
+            全局过滤器
+            </summary>
+        </member>
+        <member name="F:Base.Util.Core.Base.Models.Options.MvcCoreOptions.ScopeFliters">
+            <summary>
+            指定过滤器
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Models.Options.MvcCoreOptions.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:Base.Util.Core.Base.Models.Options.RedisCoreOptions">
+            <summary>
+            Redis注入配置项
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.RedisCoreOptions.ConnectionString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.RedisCoreOptions.Pass">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.RedisCoreOptions.CustomKey">
+            <summary>
+            默认键值
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Models.Options.RedisCoreOptions.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:Base.Util.Core.Base.Models.Options.SessionCoreOptions">
+            <summary>
+            SessionCore配置项
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.SessionCoreOptions.SessionOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.SessionCoreOptions.AntiforgeryOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Models.Options.SessionCoreOptions.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:Base.Util.Core.Base.Models.Options.SwaggerCoreOptions">
+            <summary>
+            SwaggerCore配置项
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.SwaggerCoreOptions.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.SwaggerCoreOptions.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.SwaggerCoreOptions.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.SwaggerCoreOptions.Url">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.SwaggerCoreOptions.RoutePrefix">
+            <summary>
+            路由前缀
+            </summary>
+        </member>
+        <member name="P:Base.Util.Core.Base.Models.Options.SwaggerCoreOptions.XmlFiles">
+            <summary>
+            说明文件集合
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Models.Options.SwaggerCoreOptions.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:Base.Util.Core.Base.Utils.AppSetting">
+            <summary>
+            AppJson配置读取帮助类
+            </summary>
+        </member>
+        <member name="F:Base.Util.Core.Base.Utils.AppSetting.Configuration">
+            <summary>
+            Json配置项
+            </summary>
+        </member>
+        <member name="F:Base.Util.Core.Base.Utils.AppSetting.CONFIG_FILE">
+            <summary>
+            默认配置文件名
+            </summary>
+        </member>
+        <member name="F:Base.Util.Core.Base.Utils.AppSetting.CONFIG_FILE_Collection">
+            <summary>
+            默认配置文件名集合
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.Base.Utils.AppSetting.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configuration">Json配置项</param>
+        </member>
+        <member name="M:Base.Util.Core.Base.Utils.AppSetting.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="json">Json配置项</param>
+        </member>
+        <member name="M:Base.Util.Core.Base.Utils.AppSetting.GetConfiguration">
+            <summary>
+            获取配置文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Utils.AppSetting.ConfigurationBuild">
+            <summary>
+            创建Configuration
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Utils.AppSetting.SetDefaultConfigJsonFile(System.String)">
+            <summary>
+            设置默认配置Json文件
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:Base.Util.Core.Base.Utils.AppSetting.AddConfigJsonFile(System.String[])">
+            <summary>
+            添加配置Json文件集合
+            </summary>
+            <param name="files"></param>
+        </member>
+        <member name="M:Base.Util.Core.Base.Utils.AppSetting.GetConfiguration(System.String)">
+            <summary>
+            获取配置文件信息
+            </summary>
+            <param name="configKey">多个节点可以用英文.号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Utils.AppSetting.GetConfiguration``1(System.String)">
+            <summary>
+            获取配置文件信息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="configKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Core.Base.Utils.AppSetting.GetConfigurations``1(System.String)">
+            <summary>
+            获取配置文件信息
+            </summary>
+            <param name="configKey">多个节点可以用英文.号隔开</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

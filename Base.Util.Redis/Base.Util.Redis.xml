@@ -70,11 +70,6 @@
             Redis静态变量
             </summary>
         </member>
-        <member name="F:Base.Util.Redis.RedisConst.RedisConfig">
-            <summary>
-            Redis配置类
-            </summary>
-        </member>
         <member name="F:Base.Util.Redis.RedisConst.SystemErrorRedisDbNum">
             <summary>
             系统错误记录信息使用redisDb(不可删除)
