@@ -1,5 +1,5 @@
 ﻿using Base.Util.Repository.SqlSugarCore.Abstraction;
-using Base.Util.SqlSugarBase;
+using Base.Util.Repository.SqlSugars.Abstraction;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
@@ -46,8 +46,10 @@ namespace Base.Util.Repository.SqlSugarCore.Implementation
 
         public SqlSugarRepository(ISqlSugarWorkUnit workUnit)
         {
+            if (workUnit == null) return;
             _workUnit = workUnit;
-            _sqlSugarClient = workUnit.GetSqlSugarClient();
+            var client = workUnit.GetClient();
+            if (client.GetType() == typeof(ISqlSugarClient)) _sqlSugarClient = client as ISqlSugarClient;
         }
 
         public SqlSugarRepository(SqlSugarRepository<TEntity> baseRepository)

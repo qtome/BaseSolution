@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Base.Util.Core.Base\Base.Util.Core.Base.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="appsetting.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

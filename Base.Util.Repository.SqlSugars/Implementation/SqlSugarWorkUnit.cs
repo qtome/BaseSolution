@@ -1,7 +1,8 @@
-﻿using SqlSugar;
+﻿using Base.Util.Repository.SqlSugars.Abstraction;
+using SqlSugar;
 using System;
 
-namespace Base.Util.SqlSugarBase
+namespace Base.Util.Repository.SqlSugars.Implementation
 {
     /// <summary>
     /// SqlSugar工作单元
@@ -15,7 +16,7 @@ namespace Base.Util.SqlSugarBase
             _sqlSugarClient = sqlSugarClient;
         }
 
-        public ISqlSugarClient GetSqlSugarClient()
+        public object GetClient()
         {
             return _sqlSugarClient;
         }

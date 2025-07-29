@@ -8,7 +8,7 @@
     <DocumentationFile>Base.Util.Core.Base.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Copyright>Base</Copyright>
-    <Description>Base: .Net Core基础组件</Description>
+    <Description>Base: .Net Core 基础组件</Description>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <Version>0.0.1</Version>
   </PropertyGroup>
@@ -28,12 +28,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Base.Util.Common\Base.Util.Common.csproj" />
-    <ProjectReference Include="..\Base.Util.Redis\Base.Util.Redis.csproj" />
+    <Folder Include="Cores\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Cores\" />
+    <ProjectReference Include="..\Base.Util.Redis\Base.Util.Redis.csproj" />
   </ItemGroup>
 
 </Project>

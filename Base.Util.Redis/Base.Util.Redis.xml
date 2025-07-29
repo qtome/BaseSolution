@@ -105,14 +105,19 @@
             数据库事务缓存使用Key
             </summary>
         </member>
-        <member name="F:Base.Util.Redis.RedisConst.BaseServerCacheRedisDbNum">
+        <member name="F:Base.Util.Redis.RedisConst.TraceCollectionRedisKey">
             <summary>
-            第三方服务缓存使用redisDb
+            堆栈信息缓存使用Key
             </summary>
         </member>
         <member name="F:Base.Util.Redis.RedisConst.BusinessCacheRedisDbNum">
             <summary>
             服务缓存使用redisDb
+            </summary>
+        </member>
+        <member name="F:Base.Util.Redis.RedisConst.BaseServerCacheRedisDbNum">
+            <summary>
+            第三方服务缓存使用redisDb
             </summary>
         </member>
         <member name="F:Base.Util.Redis.RedisConst.CommonRedisDbNum">

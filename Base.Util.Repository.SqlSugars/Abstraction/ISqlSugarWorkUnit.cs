@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Base.Util.SqlSugarBase
+namespace Base.Util.Repository.SqlSugars.Abstraction
 {
     /// <summary>
     /// SqlSugar工作单元
@@ -11,10 +11,10 @@ namespace Base.Util.SqlSugarBase
     public interface ISqlSugarWorkUnit
     {
         /// <summary>
-        /// 获取SqlSugar中心
+        /// 获取ISqlSugarClient
         /// </summary>
         /// <returns></returns>
-        ISqlSugarClient GetSqlSugarClient();
+        object GetClient();
 
         /// <summary>
         /// 开启事务

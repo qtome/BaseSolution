@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Base.Util.Configuration</name>
+    </assembly>
+    <members>
+        <member name="T:Base.Util.Configuration.AutoMapper.AutoMapperCommonProfileConfig">
+            <summary>
+            静态全局 AutoMapper 配置文件
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.AutoMapper.AutoMapperCommonProfileConfig.GetMapperProfiles">
+            <summary>
+            获取通用映射规则文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.AutoMapper.AutoMapperCommonProfileConfig.RegisterMappings">
+            <summary>
+            注册映射规范
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Base.Util.Configuration.AutoMapper.MapperCommonCustomConfiguration">
+            <summary>
+            AutoMapper映射规则通用类
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.AutoMapper.MapperCommonCustomConfiguration.#ctor(System.Action{AutoMapper.IMapperConfigurationExpression})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configure"></param>
+        </member>
+        <member name="M:Base.Util.Configuration.AutoMapper.MapperCommonCustomConfiguration.#ctor(AutoMapper.MapperConfigurationExpression)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configurationExpression"></param>
+        </member>
+        <member name="M:Base.Util.Configuration.AutoMapper.MapperCommonCustomConfiguration.Build(System.Action{AutoMapper.IMapperConfigurationExpression})">
+            <summary>
+            构建表达关系
+            </summary>
+            <param name="configure"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Base.Util.Configuration.AutoMapper.Profiles.GenericsProfile">
+            <summary>
+            泛型类型关系规则
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.AutoMapper.Profiles.GenericsProfile.#ctor">
+            <summary>
+            泛型类型关系规则
+            </summary>
+        </member>
+        <member name="T:Base.Util.Configuration.Cores.AutoMapperCore">
+            <summary>
+            AutoMapper 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Cores.AutoMapperCore.AddAutoMapperCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            AutoMapper 服务注入
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:Base.Util.Configuration.Cores.BaseServerCore">
+            <summary>
+            基础服务注入
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Cores.BaseServerCore.AddBaseServerCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            基础服务注入
+            </summary>
+            <param name="services"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Base.Util.Configuration.Cores.BaseServerCore.AddAuthenticationServerSdkCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            权限服务sdk 注入
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:Base.Util.Configuration.Filters.Base.BaseFilterAttribute">
+            <summary>
+            基础过滤器
+            </summary>
+            <summary>
+            基类过滤器 消息
+            </summary>
+            <summary>
+            基类过滤器 堆栈
+            </summary>
+        </member>
+        <member name="P:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.BussinessKey">
+            <summary>
+            业务key
+            </summary>
+        </member>
+        <member name="P:Base.Util.Configuration.Filters.Base.BaseFilterAttribute._redis">
+            <summary>
+            Redis 管理工具
+            </summary>
+        </member>
+        <member name="P:Base.Util.Configuration.Filters.Base.BaseFilterAttribute._redisKey">
+            <summary>
+            Redis 缓存Key
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.IsAjaxRequest(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            检查是否是Ajax调用
+            </summary>
+            <param name="request">接口请求</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.IsSwaggerRequest(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            检查是否 swagger调试调用
+            </summary>
+            <param name="request">接口请求</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.IsViewRequest(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            检查是否是查看页面
+            </summary>
+            <param name="request">接口请求</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.GetCacheKey(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            获取缓存key
+            </summary>
+            <param name="request">接口请求</param>
+            <returns>缓存key</returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.GetCacheKey(System.String)">
+            <summary>
+            获取缓存key(md5)
+            </summary>
+            <param name="data">接口请求</param>
+            <returns>缓存key</returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.GetClientIpAddress(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取客户端IP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.GetRequestHeaderInfo(Microsoft.AspNetCore.Http.HttpRequest,System.String)">
+            <summary>
+            获取头信息
+            </summary>
+            <param name="request">接口请求</param>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.GetRequestHeaderInfo(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            获取头信息
+            </summary>
+            <param name="context">请求上下文</param>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.GetRequestHeaderInfo(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            获取头信息
+            </summary>
+            <param name="headers">头信息集合字典</param>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.GetRequestHeaderInfos(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            获取所有头信息
+            </summary>
+            <param name="request">接口请求</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.GetRequestHeaderInfos(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取所有头信息
+            </summary>
+            <param name="context">请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.Success(System.String)">
+            <summary>
+            成功
+            </summary>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.Success(System.Object,System.String)">
+            <summary>
+            成功
+            </summary>
+            <param name="data">数据</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.Failed(System.Int32,System.String)">
+            <summary>
+            失败
+            </summary>
+            <param name="code">错误码</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.Failed(System.Object,System.Int32,System.String)">
+            <summary>
+            失败
+            </summary>
+            <param name="result">数据</param>
+            <param name="code">错误码</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.Failed(Base.Util.Common.Models.WebApi.HttpStateCode,System.String)">
+            <summary>
+            失败
+            </summary>
+            <param name="code">HttpStateCode 状态码</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.Failed(System.Object,Base.Util.Common.Models.WebApi.HttpStateCode,System.String)">
+            <summary>
+            失败
+            </summary>
+            <param name="result">数据</param>
+            <param name="code">HttpStateCode 状态码</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.Failed(Base.Util.Common.Models.WebApi.SystemErrorCode,System.String)">
+            <summary>
+            失败
+            </summary>
+            <param name="code">SystemErrorCode 系统错误码</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.Failed(System.Object,Base.Util.Common.Models.WebApi.SystemErrorCode,System.String)">
+            <summary>
+            失败
+            </summary>
+            <param name="result">数据</param>
+            <param name="code">SystemErrorCode 系统错误码</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.Failed(Base.Util.Common.Models.WebApi.ServiceException)">
+            <summary>
+            失败
+            </summary>
+            <param name="exception">抛出的异常</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.Message(System.Int32,System.String)">
+            <summary>
+            结果
+            </summary>
+            <param name="code">状态码</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.GetErrorTraceModel(Microsoft.AspNetCore.Http.HttpContext,Base.Util.Common.Models.WebApi.ServiceMessageModel,System.Exception)">
+            <summary>
+            获取服务追踪信息类
+            </summary>
+            <param name="context"></param>
+            <param name="model"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.InsertTraceInfo(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            插入追踪信息数据
+            </summary>
+            <param name="context">http上下文</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.FindTraceInfo(System.String)">
+            <summary>
+            获取请求追踪信息
+            </summary>
+            <param name="traceId">请求追踪Id</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.DeleteTraceInfo(System.String)">
+            <summary>
+            移除请求追踪信息
+            </summary>
+            <param name="traceId">请求追踪Id</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.GenerateTraceModel(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            生成追踪信息
+            </summary>
+            <param name="context">http上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Base.BaseFilterAttribute.GenerateTraceModel(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            生成追踪信息
+            </summary>
+            <param name="context">http上下文</param>
+            <returns></returns>
+        </member>
+        <member name="T:Base.Util.Configuration.Filters.Global.ActionFilterAttribute">
+            <summary>
+            全局行为过滤器
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Global.ActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            方法执行前
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Global.ActionFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            方法执行后
+            </summary>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>

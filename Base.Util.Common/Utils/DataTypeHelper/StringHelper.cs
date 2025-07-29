@@ -191,7 +191,7 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <summary>
         /// 按规则添加新的string集合并去重拼接
         /// </summary>
-        /// <param name="strArr"></param>
+        /// <param name="strs"></param>
         /// <param name="separator">分隔符</param>
         /// <param name="newStrs">字符串集合</param>
         /// <returns></returns>
@@ -210,7 +210,7 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <summary>
         /// 按规则添加新的string集合并去重拼接
         /// </summary>
-        /// <param name="strArr"></param>
+        /// <param name="strs"></param>
         /// <param name="separator">分隔符</param>
         /// <param name="newStrs">字符串集合</param>
         /// <returns></returns>
@@ -229,7 +229,7 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <summary>
         /// 按规则添加新的string集合并去重拼接
         /// </summary>
-        /// <param name="strArr"></param>
+        /// <param name="strs"></param>
         /// <param name="separator">分隔符</param>
         /// <param name="newStrs">字符串集合</param>
         /// <returns></returns>
@@ -245,7 +245,7 @@ namespace Base.Util.Common.Utils.DataTypeHelper
         /// <summary>
         /// 按规则添加新的string集合并去重拼接
         /// </summary>
-        /// <param name="strArr"></param>
+        /// <param name="strs"></param>
         /// <param name="separator">分隔符</param>
         /// <param name="newStrs">字符串集合</param>
         /// <returns></returns>

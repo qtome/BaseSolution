@@ -37,20 +37,24 @@
         /// 数据库事务缓存使用Key
         /// </summary>
         public const string DBTransactionRedisKey = "DBTransaction:";
+        /// <summary>
+        /// 堆栈信息缓存使用Key
+        /// </summary>
+        public const string TraceCollectionRedisKey = "TraceCollection";
 
         #endregion
 
         #region 缓存数据相关
 
         /// <summary>
-        /// 第三方服务缓存使用redisDb
-        /// </summary>
-        public const int BaseServerCacheRedisDbNum = 12;
-
-        /// <summary>
         /// 服务缓存使用redisDb
         /// </summary>
         public const int BusinessCacheRedisDbNum = 13;
+
+        /// <summary>
+        /// 第三方服务缓存使用redisDb
+        /// </summary>
+        public const int BaseServerCacheRedisDbNum = 14;
 
         /// <summary>
         /// 通用业务使用redisDb(下拉框选项相关)
@@ -59,7 +63,7 @@
         /// <summary>
         /// 通用业务缓存使用Key
         /// </summary>
-        public const string CommonCacheRedisKey = "CommonCache:";
+        public const string CommonCacheRedisKey = "Common:";
 
         #endregion
 

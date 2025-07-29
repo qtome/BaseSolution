@@ -1,5 +1,4 @@
 ﻿using Base.AuthorityApi.Controller.Base;
-using Base.Util.Core8.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Base.AuthorityApi.Controller

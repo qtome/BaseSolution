@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Base.Util.Core.SqlSugars</name>
+    </assembly>
+    <members>
+        <member name="T:Base.Util.Core.SqlSugars.Cores.SqlSugarCore">
+            <summary>
+            SqlSugar注入
+            </summary>
+        </member>
+        <member name="M:Base.Util.Core.SqlSugars.Cores.SqlSugarCore.AddSqlSugarCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.List{SqlSugar.ConnectionConfig})">
+            <summary>
+            SqlSugar注入
+            </summary>
+            <param name="services"></param>
+            <param name="configs"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+    </members>
+</doc>

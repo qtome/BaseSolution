@@ -1729,6 +1729,43 @@
             <param name="dt">DataTable</param>
             <returns>返回实体类列表</returns>
         </member>
+        <member name="T:Base.Util.Repository.SqlSugars.Abstraction.ISqlSugarWorkUnit">
+            <summary>
+            SqlSugar工作单元
+            </summary>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugars.Abstraction.ISqlSugarWorkUnit.GetClient">
+            <summary>
+            获取ISqlSugarClient
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugars.Abstraction.ISqlSugarWorkUnit.BeginTransaction">
+            <summary>
+            开启事务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugars.Abstraction.ISqlSugarWorkUnit.CommitTransaction">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugars.Abstraction.ISqlSugarWorkUnit.RollbackTransaction">
+            <summary>
+            回滚事务
+            </summary>
+        </member>
+        <member name="T:Base.Util.Repository.SqlSugars.Implementation.SqlSugarWorkUnit">
+            <summary>
+            SqlSugar工作单元
+            </summary>
+        </member>
+        <member name="M:Base.Util.Repository.SqlSugars.Implementation.SqlSugarWorkUnit.HasTransaction">
+            <summary>
+            确认当前状态是否开启事务
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Base.Util.Repository.SqlSugars.Models.SqlSugarStoredProcedureDto">
             <summary>
             存储过程类

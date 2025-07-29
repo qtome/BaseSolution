@@ -13,7 +13,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Base.Util.SqlSugarBase\Base.Util.SqlSugarBase.csproj" />
+    <PackageReference Include="SqlSugarCore" Version="5.1.4.198" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Util.Repository.Abstract\Base.Util.Repository.Abstract.csproj" />
   </ItemGroup>
 
 </Project>
