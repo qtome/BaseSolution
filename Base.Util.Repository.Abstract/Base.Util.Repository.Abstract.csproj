@@ -5,6 +5,11 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>Base.Util.Repository.Abstract.xml</DocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Copyright>Base</Copyright>
+    <Description>Base: 工具类 仓储组件 抽象</Description>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
 </Project>

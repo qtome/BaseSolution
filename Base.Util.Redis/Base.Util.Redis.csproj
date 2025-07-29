@@ -7,7 +7,7 @@
     <DocumentationFile>Base.Util.Redis.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Copyright>Base</Copyright>
-    <Description>Base: StackExchange.Redis组件扩展</Description>
+    <Description>Base: 工具类 StackExchange.Redis组件</Description>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <Version>0.0.1</Version>
   </PropertyGroup>

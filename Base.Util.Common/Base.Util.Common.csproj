@@ -7,7 +7,7 @@
     <DocumentationFile>Base.Util.Common.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Copyright>Base</Copyright>
-    <Description>Base: Utils</Description>
+    <Description>Base: 工具类 通用组件</Description>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <Version>0.0.1</Version>
   </PropertyGroup>

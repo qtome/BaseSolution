@@ -7,7 +7,7 @@
     <DocumentationFile>Base.Util.Repository.SqlSugars.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Copyright>Base</Copyright>
-    <Description>Base: 仓储SqlSugar组件</Description>
+    <Description>Base: 工具类 仓储组件 SqlSugar</Description>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <Version>0.0.1</Version>
   </PropertyGroup>
