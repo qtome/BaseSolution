@@ -16,10 +16,10 @@ namespace Base.Util.Core.SqlSugars.Cores
         /// <param name="services"></param>
         /// <param name="configs"></param>
         /// <exception cref="ArgumentNullException"></exception>
-        public static void AddSqlSugarCore(this IServiceCollection services, List<ConnectionConfig> configs)
+        public static void AddSqlSugarCore(this IServiceCollection services, List<ConnectionConfig> configs = null)
         {
             if (services == null) throw new ArgumentNullException(nameof(services));
-
+            if (configs == null) configs = new List<ConnectionConfig>();
             if (configs.Any())
             {
                 // 把多个连接对象注入服务，这里必须采用Scope，因为有事务操作

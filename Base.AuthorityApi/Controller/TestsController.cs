@@ -15,7 +15,8 @@ namespace Base.AuthorityApi.Controller
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public async Task<object> TestMethod() 
+        [Route("[action]")]
+        public async Task<object> TestMethodPost() 
         {
             try
             {

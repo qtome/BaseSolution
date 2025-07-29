@@ -1,16 +1,20 @@
 namespace Base.AuthorityApi
 {
+    /// <summary>
+    /// Æô¶¯ÎÄ¼þ
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
-
-            var services = builder.Services;
-
-            var app = builder.Build();
-
-            app.Run();
+            CreateHostBuilder(args).Build().Run();
         }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
     }
 }

@@ -13,16 +13,16 @@ namespace Base.Util.Configuration.Filters.Global
     /// <summary>
     /// 全局行为过滤器
     /// </summary>
-    public class ActionFilterAttribute : BaseFilterAttribute, IActionFilter
+    public class GlobalActionFilterAttribute : BaseFilterAttribute, IActionFilter
     {
 
-        private ILogger<ActionFilterAttribute> _logger = null;
+        private ILogger<GlobalActionFilterAttribute> _logger = null;
         private readonly IWebHostEnvironment _env;
         private IModelMetadataProvider _modelMetadataProvider = null;
         private readonly RedisManager _redis;
 
-        public ActionFilterAttribute(
-            ILogger<ActionFilterAttribute> logger
+        public GlobalActionFilterAttribute(
+            ILogger<GlobalActionFilterAttribute> logger
             , RedisConfig redisConfig
             , IWebHostEnvironment env
             , IModelMetadataProvider modelMetadataProvider)

@@ -14,11 +14,27 @@
             测试控制器
             </summary>
         </member>
-        <member name="M:Base.AuthorityApi.Controller.TestsController.TestMethod">
+        <member name="M:Base.AuthorityApi.Controller.TestsController.TestMethodPost">
             <summary>
             测试方法
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:Base.AuthorityApi.Program">
+            <summary>
+            启动文件
+            </summary>
+        </member>
+        <member name="T:Base.AuthorityApi.Startup">
+            <summary>
+            启动配置
+            </summary>
+        </member>
+        <member name="M:Base.AuthorityApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configuration"></param>
         </member>
     </members>
 </doc>

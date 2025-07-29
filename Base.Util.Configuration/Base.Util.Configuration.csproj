@@ -16,10 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Base.Util.Core.Base\Base.Util.Core.Base.csproj" />
     <ProjectReference Include="..\Base.Util.Core.SqlSugars\Base.Util.Core.SqlSugars.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Base.Util.NPOI\Base.Util.NPOI.csproj" />
   </ItemGroup>
 
 </Project>

@@ -55,6 +55,178 @@
             泛型类型关系规则
             </summary>
         </member>
+        <member name="T:Base.Util.Configuration.Controllers.BaseCustomeController">
+            <summary>
+            基类控制器
+            </summary>
+            <summary>
+            基类控制器 消息
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.GetClientIpAddress">
+            <summary>
+            获取客户端IP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.GetRequestHeaderInfo(System.String)">
+            <summary>
+            获取头信息
+            </summary>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.GetRequestHeaderInfo">
+            <summary>
+            获取所有头信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.IsSwaggerRequest">
+            <summary>
+            检查是否 swagger调试调用
+            </summary>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.AddResponseFileHeader">
+            <summary>
+            添加文件下载头信息
+            前端需要文件名的情况需要暴露出特定的头星系
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.GetDataSource">
+            <summary>
+            获取数据来源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.GetFileResult(NPOI.SS.UserModel.IWorkbook,System.String)">
+            <summary>
+            返回下载文件内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.ServiceExceptionHandle``1(Base.Util.Common.Models.WebApi.ServiceException)">
+            <summary>
+            处理服务异常
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="ex">服务异常</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.ServiceExceptionHide``1(Base.Util.Common.Models.WebApi.ServiceException)">
+            <summary>
+            隐藏服务异常
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="ex">服务异常</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.ServiceExceptionHandle``1(Base.Util.Common.Models.WebApi.SystemErrorCode,System.String)">
+            <summary>
+            处理服务异常
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="code"></param>
+            <param name="info"></param>
+            <returns></returns>
+            <exception cref="T:Base.Util.Common.Models.WebApi.ServiceException"></exception>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.ServiceExceptionHide``1(Base.Util.Common.Models.WebApi.SystemErrorCode,System.String)">
+            <summary>
+            隐藏服务异常
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="code"></param>
+            <param name="info"></param>
+            <returns></returns>
+            <exception cref="T:Base.Util.Common.Models.WebApi.ServiceException"></exception>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.Success``1(``0,System.String)">
+            <summary>
+            成功
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="data">数据</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.Success``1(System.String)">
+            <summary>
+            成功
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.Failed``1(System.Int32,System.String)">
+            <summary>
+            失败
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="code">错误码</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.Failed``1(System.Int32,System.String,``0)">
+            <summary>
+            失败
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="code">错误码</param>
+            <param name="info">信息</param>
+            <param name="result">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.Failed``1(Base.Util.Common.Models.WebApi.SystemErrorCode,System.String)">
+            <summary>
+            失败
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="code">SystemErrorCode 系统错误码</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.Failed``1(Base.Util.Common.Models.WebApi.SystemErrorCode,System.String,``0)">
+            <summary>
+            失败
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="code">SystemErrorCode 系统错误码</param>
+            <param name="info">信息</param>
+            <param name="result">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.Failed``1(Base.Util.Common.Models.WebApi.ServiceException)">
+            <summary>
+            失败
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="exception">抛出的异常</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.Message(Base.Util.Common.Models.WebApi.SystemErrorCode,System.String)">
+            <summary>
+            结果
+            </summary>
+            <param name="code">SystemErrorCode 系统错误码</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Controllers.BaseCustomeController.Message(Base.Util.Common.Models.WebApi.HttpStateCode,System.String)">
+            <summary>
+            结果
+            </summary>
+            <param name="code">SystemErrorCode 系统错误码</param>
+            <param name="info">信息</param>
+            <returns></returns>
+        </member>
         <member name="T:Base.Util.Configuration.Cores.AutoMapperCore">
             <summary>
             AutoMapper 启动服务
@@ -83,6 +255,56 @@
             权限服务sdk 注入
             </summary>
             <param name="services"></param>
+        </member>
+        <member name="T:Base.Util.Configuration.Cores.CustomeCore">
+            <summary>
+            自定义注入
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Cores.CustomeCore.AddCustomeCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            自定义注入
+            </summary>
+            <param name="services"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Base.Util.Configuration.Cores.CustomeCore.UseCustomeCore(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            自定义注入中间件
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Base.Util.Configuration.Cores.MvcCore">
+            <summary>
+            MVC 启动服务
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Cores.MvcCore.AddMvcConfiguartionCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,Base.Util.Core.Base.Models.Options.MvcCoreOptions)">
+            <summary>
+            MVC 服务注入
+            </summary>
+            <param name="services"></param>
+            <param name="options"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Base.Util.Configuration.Filters.AuthenticationFilterAttribute">
+            <summary>
+            验证数据权限过滤器（简易：验证有效权限数据）
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.AuthenticationFilterAttribute.#ctor(Microsoft.Extensions.Logging.ILogger{Base.Util.Configuration.Filters.AuthenticationFilterAttribute},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Mvc.ModelBinding.IModelMetadataProvider)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="logger"></param>
+            <param name="env"></param>
+            <param name="modelMetadataProvider"></param>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.AuthenticationFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            方法执行前 验证是否包含 指定验证信息
+            </summary>
+            <param name="context"></param>
         </member>
         <member name="T:Base.Util.Configuration.Filters.Base.BaseFilterAttribute">
             <summary>
@@ -314,22 +536,118 @@
             <param name="context">http上下文</param>
             <returns></returns>
         </member>
-        <member name="T:Base.Util.Configuration.Filters.Global.ActionFilterAttribute">
+        <member name="T:Base.Util.Configuration.Filters.Global.GlobalActionFilterAttribute">
             <summary>
             全局行为过滤器
             </summary>
         </member>
-        <member name="M:Base.Util.Configuration.Filters.Global.ActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+        <member name="M:Base.Util.Configuration.Filters.Global.GlobalActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
             <summary>
             方法执行前
             </summary>
             <param name="context"></param>
         </member>
-        <member name="M:Base.Util.Configuration.Filters.Global.ActionFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+        <member name="M:Base.Util.Configuration.Filters.Global.GlobalActionFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
             <summary>
             方法执行后
             </summary>
             <param name="context"></param>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Global.GlobalActionFilterAttribute.GetServiceMessageModel(System.Collections.Generic.List{System.String},Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            返回接口消息体
+            </summary>
+            <param name="errorMessages"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:Base.Util.Configuration.Filters.Global.GlobalExceptionFilterAttribute">
+            <summary>
+            全局异常处理
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Global.GlobalExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            发生异常之后触发到这儿
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Global.GlobalExceptionFilterAttribute.GetExceptionServiceMessageModel(System.Exception,Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            根据异常返回接口消息体
+            </summary>
+            <param name="ex"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:Base.Util.Configuration.Filters.Global.GlobalResultFilterAttribute">
+            <summary>
+            全局结果过滤器
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Global.GlobalResultFilterAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)">
+            <summary>
+            渲染视图之前执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Base.Util.Configuration.Filters.Global.GlobalResultFilterAttribute.OnResultExecuted(Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext)">
+            <summary>
+            渲染视图之后执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Base.Util.Configuration.Filters.NoAuthenticationFilterAttribute">
+            <summary>
+            反向权限验证过滤器（与AuthenticationFilterAttribute配对，用来过滤）
+            </summary>
+        </member>
+        <member name="T:Base.Util.Configuration.Statics.AuthInfo.BaseAuthConst">
+            <summary>
+            基础权限静态类
+            </summary>
+        </member>
+        <member name="F:Base.Util.Configuration.Statics.AuthInfo.BaseAuthConst.headerKey">
+            <summary>
+            验证信息 头信息 键
+            </summary>
+        </member>
+        <member name="F:Base.Util.Configuration.Statics.AuthInfo.BaseAuthConst.defaultPassword">
+            <summary>
+            项目默认用密码
+            </summary>
+        </member>
+        <member name="F:Base.Util.Configuration.Statics.AuthInfo.BaseAuthConst.defaultPasswordRegex">
+            <summary>
+            项目密码复杂度正则
+            长度在8到20个字符之间
+            至少包含一个数字
+            至少包含一个小写字母
+            至少包含一个大写字母
+            至少包含一个特殊字符
+            </summary>
+        </member>
+        <member name="M:Base.Util.Configuration.Statics.AuthInfo.BaseAuthConst.ValidateStrongPassword(System.String)">
+            <summary>
+            验证密码是否是强密码
+            defaultPasswordRegex
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Statics.AuthInfo.BaseAuthConst.IsPasswordOverTime(System.DateTime,System.Int32)">
+            <summary>
+            判断用户是否超过半年未修改密码
+            </summary>
+            <param name="latestChangeDate">最新修改密码时间</param>
+            <param name="passwordOverMonth">密码强制变更周期</param>
+            <returns></returns>
+        </member>
+        <member name="M:Base.Util.Configuration.Statics.AuthInfo.BaseAuthConst.DecryptWithRsa(System.String,System.String)">
+            <summary>
+            使用私钥解密密码
+            </summary>
+            <param name="encryptedPassword">加密后的密码</param>
+            <param name="privateKey">私钥</param>
+            <returns></returns>
         </member>
     </members>
 </doc>
